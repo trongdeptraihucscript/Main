@@ -1,0 +1,44 @@
+--// HWID KEY SYSTEM by TrongNguyen
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+local HttpService = game:GetService("HttpService")
+
+-- Lấy HWID (đơn giản, ổn định)
+local HWID = tostring(LocalPlayer.UserId) .. "-" .. HttpService:GenerateGUID(false)
+
+-- 🔑 DANH SÁCH KEY HỢP LỆ (bạn tự tạo)
+local ValidKeys = {
+    ["hoangtrong-1ft-123"] = true,
+    ["trong123"] = true
+}
+
+-- 🧠 HÀM TẠO KEY TỪ HWID
+local function GenerateKey(hwid)
+    return "TN-" .. string.sub(hwid, 1, 5)
+end
+
+-- 📥 NHẬP KEY
+local UserKey = tostring(getgenv().Key or "")
+
+if UserKey == "" then
+    warn("Chưa nhập key!")
+    warn("Dùng: getgenv().Key = 'KEY_CUA_BAN'")
+    return
+end
+
+-- 🔍 KIỂM TRA KEY
+local RealKey = GenerateKey(HWID)
+
+if UserKey == RealKey then
+    print("✅ KEY ĐÚNG | HWID HỢP LỆ")
+else
+    warn("❌ KEY SAI!")
+    warn("🔑 Key đúng của bạn là: "..RealKey)
+    setclipboard(RealKey)
+    warn("📋 Đã copy key vào clipboard")
+    return
+end
+
+-- 🚀 LOAD SCRIPT 
+repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
+loadstring(game:HttpGet("https://raw.githubusercontent.com/trongdeptraihucscript/Main/refs/heads/main/freemium.lua"))()
