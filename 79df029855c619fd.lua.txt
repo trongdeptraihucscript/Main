@@ -1,0 +1,2914 @@
+-- ts file was generated at discord.gg/25ms
+
+local genv = getgenv()
+local fenv = getfenv()
+
+task.wait()
+game:IsLoaded()
+
+local _call5 = game:GetService('HttpService')
+
+makefolder('Night Mystic')
+
+_G.SaveData = {}
+fenv.SaveSettings = function(_7, _7_2, _7_3)
+    local _call9 = _call5:JSONEncode({})
+
+    writefile('Night Mystic/Settings.json', _call9)
+end
+fenv.LoadSettings = function()
+    _call5:JSONDecode(_call9)
+end
+fenv.GetSetting = function(_14, _14_2, _14_3, _14_4, _14_5)
+    local _ = _call13[_14]
+
+    return _call13[_14]
+end
+
+local _call19 = _call5:JSONDecode(_call9)
+local _LocalPlayer22 = game:GetService('Players').LocalPlayer
+local _ = _LocalPlayer22.Team
+local _ = _LocalPlayer22.Team.Name
+
+game:GetService('ReplicatedStorage').Remotes.CommF_:InvokeServer('SetTeam', 'Marines')
+
+local _call33 = game:GetService('Lighting')
+
+_call33.Ambient = Color3.new(0.695, 0.695, 0.695)
+_call33.ColorShift_Bottom = Color3.new(0.695, 0.695, 0.695)
+_call33.ColorShift_Top = Color3.new(0.695, 0.695, 0.695)
+
+local _gamePlayers40 = game.Players
+
+fenv.ply = _gamePlayers40
+
+local _LocalPlayer41 = _gamePlayers40.LocalPlayer
+
+fenv.plr = _LocalPlayer41
+fenv.Root = _LocalPlayer41.Character.HumanoidRootPart
+
+local _call45 = game:GetService('ReplicatedStorage')
+
+fenv.replicated = _call45
+fenv.Lv = game.Players.LocalPlayer.Data.Level.Value
+fenv.TeleportService = game:GetService('TeleportService')
+fenv.TW = game:GetService('TweenService')
+
+game:GetService('Lighting')
+
+fenv.Enemies = workspace.Enemies
+fenv.vim1 = game:GetService('VirtualInputManager')
+fenv.vim2 = game:GetService('VirtualUser')
+fenv.TeamSelf = _LocalPlayer41.Team
+fenv.RunSer = game:GetService('RunService')
+fenv.Stats = game:GetService('Stats')
+fenv.Energy = _LocalPlayer41.Character.Energy.Value
+fenv.Boss = {}
+fenv.BringConnections = {}
+fenv.MaterialList = {}
+fenv.NPCList = {}
+fenv.shouldTween = false
+fenv.SoulGuitar = false
+fenv.KenTest = true
+fenv.debug = false
+fenv.Brazier1 = false
+fenv.Brazier2 = false
+fenv.Brazier3 = false
+fenv.Sec = 0.1
+fenv.ClickState = 0
+fenv.Num_self = 25
+
+_LocalPlayer41.PlayerGui:WaitForChild('Main'):WaitForChild('Loading')
+game:IsLoaded()
+wait()
+
+local _ = game.PlaceId
+local _ = game.PlaceId
+local _ = game.PlaceId
+local _ = game.PlaceId
+local _ = game.PlaceId
+local _ = game.PlaceId
+local _ = fenv.World1
+local _ = fenv.World2
+local _ = fenv.World3
+
+fenv.Sea = _LocalPlayer41:Kick('\u{274c} Error : A[12]Blox Fruits \u{274c}')
+fenv.Marines = function()
+    _call45.Remotes.CommF_:InvokeServer('SetTeam', 'Marines')
+end
+fenv.Pirates = function()
+    _call45.Remotes.CommF_:InvokeServer('SetTeam', 'Pirates')
+end
+
+local _101 = loadstring(game:HttpGet('https://pastefy.app/fRTX9GUK/raw'))()
+
+CFrame.new(-712.82727050781, 98.577049255371, 5711.9541015625)
+CFrame.new(-723.43316650391, 147.42906188965, 5931.9931640625)
+CFrame.new(7021.5043945312, 55.762702941895, -730.12908935547)
+CFrame.new(6625, 378, 244)
+CFrame.new(4692.7939453125, 797.97668457031, 858.84802246094)
+CFrame.new(4902, 670, 39)
+CFrame.new(2401, 123, -7589)
+CFrame.new(3588, 229, -7085)
+CFrame.new(-10941, 332, -8760)
+CFrame.new(-11035, 332, -9087)
+CFrame.new(-13446, 413, -7760)
+CFrame.new(-13510, 584, -6987)
+CFrame.new(-11778, 426, -10592)
+CFrame.new(-13282, 496, -9565)
+CFrame.new(-8764, 142, 5963)
+CFrame.new(-10227, 421, 6161)
+CFrame.new(-9579, 6, 6194)
+CFrame.new(-9579, 6, 6194)
+CFrame.new(-1993, 187, -10103)
+CFrame.new(-2215, 159, -10474)
+CFrame.new(-877, 118, -11032)
+CFrame.new(-877, 118, -11032)
+CFrame.new(-2021, 38, -12028)
+CFrame.new(-2024, 38, -12026)
+CFrame.new(-1932, 38, -12848)
+CFrame.new(-1932, 38, -12848)
+CFrame.new(95, 73, -12309)
+CFrame.new(647, 42, -12401)
+CFrame.new(116, 36, -12478)
+CFrame.new(47, 61, -12889)
+CFrame.new(5251, 5, 1111)
+
+fenv.EquipWeapon = function(_164)
+    _LocalPlayer41.Backpack:FindFirstChild(_164)
+
+    local _Humanoid169 = _LocalPlayer41.Character.Humanoid
+
+    _Humanoid169:EquipTool(_LocalPlayer41.Backpack:FindFirstChild(_164))
+end
+fenv.weaponSc = function(_175, _175_2, _175_3, _175_4)
+    for _179, _179_2 in pairs(_LocalPlayer41.Backpack:GetChildren())do
+        _179_2:IsA('Tool')
+
+        local _ = _179_2.ToolTip == _175
+    end
+end
+
+hookfunction(require(game:GetService('ReplicatedStorage').Effect.Container.Death), function(_191, _191_2, _191_3, _191_4, _191_5) end)
+hookfunction(require(game:GetService('ReplicatedStorage'):WaitForChild('GuideModule')).ChangeDisplayedNPC, function(_199) end)
+hookfunction(function(...)
+    error("invalid argument #2 to 'error' (number expected, got table)")
+end, function(_202, _202_2, _202_3, _202_4, _202_5) end)
+hookfunction(warn, function(_204, _204_2, _204_3, _204_4, _204_5) end)
+workspace:FindFirstChild('Rocks'):Destroy()
+game:GetService('Lighting'):FindFirstChild('LightingLayers')
+
+local _workspace_WorldOrigin213 = workspace._WorldOrigin
+local _Foam214 = _workspace_WorldOrigin213['Foam;']
+local _workspace_WorldOrigin215 = workspace._WorldOrigin
+local _ = _workspace_WorldOrigin215['Foam;']
+
+_Foam214:Destroy()
+
+fenv.gay = nil
+
+local _ = _G.MobHeight
+
+_G.MobHeight = 20
+fenv.BringEnemy = function(_219)
+    local _ = fenv._B
+end
+_G.FruitSkills = {
+    X = false,
+    C = false,
+    Z = false,
+    F = false,
+    V = false,
+}
+fenv.UseFruitSkills = function(_221)
+    for _225, _225_2 in pairs(_LocalPlayer41.Backpack:GetChildren())do
+        _225_2:IsA('Tool')
+
+        local _ = _225_2.ToolTip
+    end
+end
+fenv.statsSetings = function(_229, _229_2, _229_3, _229_4, _229_5) end
+fenv._G = _G
+fenv._B = false
+fenv.PosMon = nil
+
+local _ = _G.BringRange
+
+_G.BringRange = 250
+
+local _ = _G.MaxBringMobs
+
+_G.MaxBringMobs = 3
+
+local _ = _G.SpeedB
+
+_G.SpeedB = 190
+_G.CanBringCycle = true
+
+game:GetService('TweenService')
+
+fenv.BringEnemy = function(_232, _232_2, _232_3) end
+
+task.spawn(function(_235, _235_2, _235_3, _235_4, _235_5)
+    task.wait(3)
+
+    for _239, _239_2 in pairs(workspace.Enemies:GetChildren())do
+        local _call241 = _239_2:FindFirstChild('HumanoidRootPart')
+
+        _call241:FindFirstChild('BodyVelocity')
+        _call241.BodyVelocity:Destroy()
+
+        _call241.CanCollide = true
+    end
+
+    task.wait(5)
+    task.wait(3)
+
+    for _250, _250_2 in pairs(workspace.Enemies:GetChildren())do
+        local _call252 = _250_2:FindFirstChild('HumanoidRootPart')
+
+        _call252:FindFirstChild('BodyVelocity')
+        _call252.BodyVelocity:Destroy()
+
+        _call252.CanCollide = true
+    end
+
+    task.wait(5)
+    task.wait(3)
+
+    for _261, _261_2 in pairs(workspace.Enemies:GetChildren())do
+        local _call263 = _261_2:FindFirstChild('HumanoidRootPart')
+
+        _call263:FindFirstChild('BodyVelocity')
+        _call263.BodyVelocity:Destroy()
+
+        _call263.CanCollide = true
+    end
+
+    task.wait(5)
+    task.wait(3)
+
+    for _272, _272_2 in pairs(workspace.Enemies:GetChildren())do
+        local _call274 = _272_2:FindFirstChild('HumanoidRootPart')
+
+        _call274:FindFirstChild('BodyVelocity')
+        _call274.BodyVelocity:Destroy()
+
+        _call274.CanCollide = true
+    end
+
+    task.wait(5)
+    task.wait(3)
+
+    for _283, _283_2 in pairs(workspace.Enemies:GetChildren())do
+        local _call285 = _283_2:FindFirstChild('HumanoidRootPart')
+
+        _call285:FindFirstChild('BodyVelocity')
+        _call285.BodyVelocity:Destroy()
+
+        _call285.CanCollide = true
+    end
+
+    task.wait(5)
+    task.wait(3)
+
+    for _294, _294_2 in pairs(workspace.Enemies:GetChildren())do
+        local _call296 = _294_2:FindFirstChild('HumanoidRootPart')
+
+        _call296:FindFirstChild('BodyVelocity')
+        _call296.BodyVelocity:Destroy()
+
+        _call296.CanCollide = true
+    end
+
+    task.wait(5)
+    task.wait(3)
+
+    for _305, _305_2 in pairs(workspace.Enemies:GetChildren())do
+        local _call307 = _305_2:FindFirstChild('HumanoidRootPart')
+
+        _call307:FindFirstChild('BodyVelocity')
+        _call307.BodyVelocity:Destroy()
+
+        _call307.CanCollide = true
+    end
+
+    task.wait(5)
+    task.wait(3)
+
+    for _316, _316_2 in pairs(workspace.Enemies:GetChildren())do
+        local _call318 = _316_2:FindFirstChild('HumanoidRootPart')
+
+        _call318:FindFirstChild('BodyVelocity')
+        _call318.BodyVelocity:Destroy()
+
+        _call318.CanCollide = true
+    end
+
+    task.wait(5)
+    task.wait(3)
+
+    for _327, _327_2 in pairs(workspace.Enemies:GetChildren())do
+        local _call329 = _327_2:FindFirstChild('HumanoidRootPart')
+
+        _call329:FindFirstChild('BodyVelocity')
+        _call329.BodyVelocity:Destroy()
+
+        _call329.CanCollide = true
+    end
+
+    task.wait(5)
+    task.wait(3)
+
+    for _338, _338_2 in pairs(workspace.Enemies:GetChildren())do
+        local _call340 = _338_2:FindFirstChild('HumanoidRootPart')
+
+        _call340:FindFirstChild('BodyVelocity')
+        _call340.BodyVelocity:Destroy()
+
+        _call340.CanCollide = true
+    end
+
+    task.wait(5)
+    task.wait(3)
+
+    for _349, _349_2 in pairs(workspace.Enemies:GetChildren())do
+        local _call351 = _349_2:FindFirstChild('HumanoidRootPart')
+
+        _call351:FindFirstChild('BodyVelocity')
+        _call351.BodyVelocity:Destroy()
+
+        _call351.CanCollide = true
+    end
+
+    task.wait(5)
+    task.wait(3)
+
+    for _360, _360_2 in pairs(workspace.Enemies:GetChildren())do
+        local _call362 = _360_2:FindFirstChild('HumanoidRootPart')
+
+        _call362:FindFirstChild('BodyVelocity')
+        _call362.BodyVelocity:Destroy()
+
+        _call362.CanCollide = true
+    end
+
+    task.wait(5)
+    task.wait(3)
+
+    for _371, _371_2 in pairs(workspace.Enemies:GetChildren())do
+        local _call373 = _371_2:FindFirstChild('HumanoidRootPart')
+
+        _call373:FindFirstChild('BodyVelocity')
+        _call373.BodyVelocity:Destroy()
+
+        _call373.CanCollide = true
+    end
+
+    task.wait(5)
+    task.wait(3)
+
+    for _382, _382_2 in pairs(workspace.Enemies:GetChildren())do
+        local _call384 = _382_2:FindFirstChild('HumanoidRootPart')
+
+        _call384:FindFirstChild('BodyVelocity')
+        _call384.BodyVelocity:Destroy()
+
+        _call384.CanCollide = true
+    end
+
+    task.wait(5)
+    task.wait(3)
+
+    for _393, _393_2 in pairs(workspace.Enemies:GetChildren())do
+        local _ = _393_2.FindFirstChild
+
+        error('internal 557: <25ms: infinitelooperror>')
+    end
+end)
+task.spawn(function(_398)
+    task.wait(0.1)
+
+    local _ = _G.FarmMastery_S
+    local _ = _G.FarmMastery_G
+    local _ = _G.FarmMastery_Dev
+    local _ = _G.StartFarm
+    local _ = genv.AutoMaterial
+    local _ = _G.WardenBoss
+    local _ = _G.AutoFactory
+    local _ = _G.HCM
+    local _ = _G.PGB
+    local _ = _G.UPGDrago
+    local _ = _G.AutoFireFlowers
+    local _ = _G.DT_Uzoth
+    local _ = _G.AutoBerry
+    local _ = _G.CollectPresent
+    local _ = _G.AutoPhoenixF
+    local _ = _G.AutoHytHallow
+    local _ = _G.LongsWord
+    local _ = _G.BlackSpikey
+    local _ = _G.AutoHolyTorch
+    local _ = _G.TrainDrago
+    local _ = _G.AutoSaber
+    local _ = _G.CitizenQuest
+    local _ = _G.AutoEctoplasm
+    local _ = _G.KeysRen
+    local _ = _G.Auto_Rainbow_Haki
+    local _ = _G.AutoBigmom
+    local _ = _G.AuraBoss
+    local _ = _G.Auto_Cavender
+    local _ = _G.FarmEliteHunt
+    local _ = _G.AutoZou
+    local _ = _G.AcientOne
+    local _ = _G.AutoFarmNear
+    local _ = _G.AutoRaidCastle
+    local _ = _G.Addealer
+    local _ = _G.TwinHook
+    local _ = _G.Auto
+    local _ = _G.Auto_Def_DarkCoat
+    local _ = _G.AutoMatSoul
+    local _ = _G.AutoSerpentBow
+    local _ = _G.AutoFMon
+    local _ = _G.Auto_Soul_Guitar
+    local _ = _G.AutoSaw
+    local _ = _G.AutoTridentW2
+    local _ = _G.AutoEvoRace
+    local _ = _G.AutoGetQuestBounty
+    local _ = _G.MarinesCoat
+    local _ = _G.TravelDres
+    local _ = _G.Defeating
+    local _ = _G.DummyMan
+    local _ = _G.Auto_Yama
+    local _ = _G.Auto_SwanGG
+    local _ = _G.SwanCoat
+    local _ = _G.AutoEcBoss
+    local _ = _G.Auto_Mink
+    local _ = _G.Auto_Human
+    local _ = _G.Auto_Skypiea
+    local _ = _G.Auto_Fish
+    local _ = _G.CDK_TS
+    local _ = _G.CDK_YM
+    local _ = _G.CDK
+    local _ = _G.AutoFarmGodChalice
+    local _ = _G.Teleport
+    local _ = _G.AutoKilo
+    local _ = _G.AutoGetUsoap
+    local _ = _G.Praying
+    local _ = _G.TryLucky
+    local _ = _G.AutoColShad
+    local _ = _G.AutoUnHaki
+    local _ = _G.Auto_DonAcces
+    local _ = _G.DragoV1
+    local _ = fenv.NextIs
+    local _ = _G.FarmGodChalice
+    local _ = _G.IceBossRen
+    local _ = fenv.senth
+    local _ = fenv.senth2
+    local _ = _G.BringMobsUser
+
+    fenv._B = false
+
+    task.wait(0.1)
+
+    local _ = _G.FarmMastery_S
+    local _ = _G.FarmMastery_G
+    local _ = _G.FarmMastery_Dev
+    local _ = _G.StartFarm
+    local _ = genv.AutoMaterial
+    local _ = _G.WardenBoss
+    local _ = _G.AutoFactory
+    local _ = _G.HCM
+    local _ = _G.PGB
+    local _ = _G.UPGDrago
+    local _ = _G.AutoFireFlowers
+    local _ = _G.DT_Uzoth
+    local _ = _G.AutoBerry
+    local _ = _G.CollectPresent
+    local _ = _G.AutoPhoenixF
+    local _ = _G.AutoHytHallow
+    local _ = _G.LongsWord
+    local _ = _G.BlackSpikey
+    local _ = _G.AutoHolyTorch
+    local _ = _G.TrainDrago
+    local _ = _G.AutoSaber
+    local _ = _G.CitizenQuest
+    local _ = _G.AutoEctoplasm
+    local _ = _G.KeysRen
+    local _ = _G.Auto_Rainbow_Haki
+    local _ = _G.AutoBigmom
+    local _ = _G.AuraBoss
+    local _ = _G.Auto_Cavender
+    local _ = _G.FarmEliteHunt
+    local _ = _G.AutoZou
+    local _ = _G.AcientOne
+    local _ = _G.AutoFarmNear
+    local _ = _G.AutoRaidCastle
+    local _ = _G.Addealer
+    local _ = _G.TwinHook
+    local _ = _G.Auto
+    local _ = _G.Auto_Def_DarkCoat
+    local _ = _G.AutoMatSoul
+    local _ = _G.AutoSerpentBow
+    local _ = _G.AutoFMon
+    local _ = _G.Auto_Soul_Guitar
+    local _ = _G.AutoSaw
+    local _ = _G.AutoTridentW2
+    local _ = _G.AutoEvoRace
+    local _ = _G.AutoGetQuestBounty
+    local _ = _G.MarinesCoat
+    local _ = _G.TravelDres
+    local _ = _G.Defeating
+    local _ = _G.DummyMan
+    local _ = _G.Auto_Yama
+    local _ = _G.Auto_SwanGG
+    local _ = _G.SwanCoat
+    local _ = _G.AutoEcBoss
+    local _ = _G.Auto_Mink
+    local _ = _G.Auto_Human
+    local _ = _G.Auto_Skypiea
+    local _ = _G.Auto_Fish
+    local _ = _G.CDK_TS
+    local _ = _G.CDK_YM
+    local _ = _G.CDK
+    local _ = _G.AutoFarmGodChalice
+    local _ = _G.Teleport
+    local _ = _G.AutoKilo
+    local _ = _G.AutoGetUsoap
+    local _ = _G.Praying
+    local _ = _G.TryLucky
+    local _ = _G.AutoColShad
+    local _ = _G.AutoUnHaki
+    local _ = _G.Auto_DonAcces
+    local _ = _G.DragoV1
+    local _ = _G.FarmGodChalice
+    local _ = _G.IceBossRen
+    local _ = _G.BringMobsUser
+
+    fenv._B = false
+
+    task.wait(0.1)
+
+    local _ = _G.FarmMastery_S
+    local _ = _G.FarmMastery_G
+    local _ = _G.FarmMastery_Dev
+    local _ = _G.StartFarm
+    local _ = genv.AutoMaterial
+    local _ = _G.WardenBoss
+    local _ = _G.AutoFactory
+    local _ = _G.HCM
+    local _ = _G.PGB
+    local _ = _G.UPGDrago
+    local _ = _G.AutoFireFlowers
+    local _ = _G.DT_Uzoth
+    local _ = _G.AutoBerry
+    local _ = _G.CollectPresent
+    local _ = _G.AutoPhoenixF
+    local _ = _G.AutoHytHallow
+    local _ = _G.LongsWord
+    local _ = _G.BlackSpikey
+    local _ = _G.AutoHolyTorch
+    local _ = _G.TrainDrago
+    local _ = _G.AutoSaber
+    local _ = _G.CitizenQuest
+    local _ = _G.AutoEctoplasm
+    local _ = _G.KeysRen
+    local _ = _G.Auto_Rainbow_Haki
+    local _ = _G.AutoBigmom
+    local _ = _G.AuraBoss
+    local _ = _G.Auto_Cavender
+    local _ = _G.FarmEliteHunt
+    local _ = _G.AutoZou
+    local _ = _G.AcientOne
+    local _ = _G.AutoFarmNear
+    local _ = _G.AutoRaidCastle
+    local _ = _G.Addealer
+    local _ = _G.TwinHook
+    local _ = _G.Auto
+    local _ = _G.Auto_Def_DarkCoat
+    local _ = _G.AutoMatSoul
+    local _ = _G.AutoSerpentBow
+    local _ = _G.AutoFMon
+    local _ = _G.Auto_Soul_Guitar
+    local _ = _G.AutoSaw
+    local _ = _G.AutoTridentW2
+    local _ = _G.AutoEvoRace
+    local _ = _G.AutoGetQuestBounty
+    local _ = _G.MarinesCoat
+    local _ = _G.TravelDres
+    local _ = _G.Defeating
+    local _ = _G.DummyMan
+    local _ = _G.Auto_Yama
+    local _ = _G.Auto_SwanGG
+    local _ = _G.SwanCoat
+    local _ = _G.AutoEcBoss
+    local _ = _G.Auto_Mink
+    local _ = _G.Auto_Human
+    local _ = _G.Auto_Skypiea
+    local _ = _G.Auto_Fish
+    local _ = _G.CDK_TS
+    local _ = _G.CDK_YM
+    local _ = _G.CDK
+    local _ = _G.AutoFarmGodChalice
+    local _ = _G.Teleport
+    local _ = _G.AutoKilo
+    local _ = _G.AutoGetUsoap
+    local _ = _G.Praying
+    local _ = _G.TryLucky
+    local _ = _G.AutoColShad
+    local _ = _G.AutoUnHaki
+    local _ = _G.Auto_DonAcces
+    local _ = _G.DragoV1
+    local _ = _G.FarmGodChalice
+    local _ = _G.IceBossRen
+    local _ = _G.BringMobsUser
+
+    fenv._B = false
+
+    task.wait(0.1)
+
+    local _ = _G.FarmMastery_S
+    local _ = _G.FarmMastery_G
+    local _ = _G.FarmMastery_Dev
+    local _ = _G.StartFarm
+    local _ = genv.AutoMaterial
+    local _ = _G.WardenBoss
+    local _ = _G.AutoFactory
+    local _ = _G.HCM
+    local _ = _G.PGB
+    local _ = _G.UPGDrago
+    local _ = _G.AutoFireFlowers
+    local _ = _G.DT_Uzoth
+    local _ = _G.AutoBerry
+    local _ = _G.CollectPresent
+    local _ = _G.AutoPhoenixF
+    local _ = _G.AutoHytHallow
+    local _ = _G.LongsWord
+    local _ = _G.BlackSpikey
+    local _ = _G.AutoHolyTorch
+    local _ = _G.TrainDrago
+    local _ = _G.AutoSaber
+    local _ = _G.CitizenQuest
+    local _ = _G.AutoEctoplasm
+    local _ = _G.KeysRen
+    local _ = _G.Auto_Rainbow_Haki
+    local _ = _G.AutoBigmom
+    local _ = _G.AuraBoss
+    local _ = _G.Auto_Cavender
+    local _ = _G.FarmEliteHunt
+    local _ = _G.AutoZou
+    local _ = _G.AcientOne
+    local _ = _G.AutoFarmNear
+    local _ = _G.AutoRaidCastle
+    local _ = _G.Addealer
+    local _ = _G.TwinHook
+    local _ = _G.Auto
+    local _ = _G.Auto_Def_DarkCoat
+    local _ = _G.AutoMatSoul
+    local _ = _G.AutoSerpentBow
+    local _ = _G.AutoFMon
+    local _ = _G.Auto_Soul_Guitar
+    local _ = _G.AutoSaw
+    local _ = _G.AutoTridentW2
+    local _ = _G.AutoEvoRace
+    local _ = _G.AutoGetQuestBounty
+    local _ = _G.MarinesCoat
+    local _ = _G.TravelDres
+    local _ = _G.Defeating
+    local _ = _G.DummyMan
+    local _ = _G.Auto_Yama
+    local _ = _G.Auto_SwanGG
+    local _ = _G.SwanCoat
+    local _ = _G.AutoEcBoss
+    local _ = _G.Auto_Mink
+    local _ = _G.Auto_Human
+    local _ = _G.Auto_Skypiea
+    local _ = _G.Auto_Fish
+    local _ = _G.CDK_TS
+    local _ = _G.CDK_YM
+    local _ = _G.CDK
+    local _ = _G.AutoFarmGodChalice
+    local _ = _G.Teleport
+    local _ = _G.AutoKilo
+    local _ = _G.AutoGetUsoap
+    local _ = _G.Praying
+    local _ = _G.TryLucky
+    local _ = _G.AutoColShad
+    local _ = _G.AutoUnHaki
+    local _ = _G.Auto_DonAcces
+    local _ = _G.DragoV1
+    local _ = _G.FarmGodChalice
+    local _ = _G.IceBossRen
+    local _ = _G.BringMobsUser
+
+    fenv._B = false
+
+    task.wait(0.1)
+
+    local _ = _G.FarmMastery_S
+    local _ = _G.FarmMastery_G
+    local _ = _G.FarmMastery_Dev
+    local _ = _G.StartFarm
+    local _ = genv.AutoMaterial
+    local _ = _G.WardenBoss
+    local _ = _G.AutoFactory
+    local _ = _G.HCM
+    local _ = _G.PGB
+    local _ = _G.UPGDrago
+    local _ = _G.AutoFireFlowers
+    local _ = _G.DT_Uzoth
+    local _ = _G.AutoBerry
+    local _ = _G.CollectPresent
+    local _ = _G.AutoPhoenixF
+    local _ = _G.AutoHytHallow
+    local _ = _G.LongsWord
+    local _ = _G.BlackSpikey
+    local _ = _G.AutoHolyTorch
+    local _ = _G.TrainDrago
+    local _ = _G.AutoSaber
+    local _ = _G.CitizenQuest
+    local _ = _G.AutoEctoplasm
+    local _ = _G.KeysRen
+    local _ = _G.Auto_Rainbow_Haki
+    local _ = _G.AutoBigmom
+    local _ = _G.AuraBoss
+    local _ = _G.Auto_Cavender
+    local _ = _G.FarmEliteHunt
+    local _ = _G.AutoZou
+    local _ = _G.AcientOne
+    local _ = _G.AutoFarmNear
+    local _ = _G.AutoRaidCastle
+    local _ = _G.Addealer
+    local _ = _G.TwinHook
+    local _ = _G.Auto
+    local _ = _G.Auto_Def_DarkCoat
+    local _ = _G.AutoMatSoul
+    local _ = _G.AutoSerpentBow
+    local _ = _G.AutoFMon
+    local _ = _G.Auto_Soul_Guitar
+    local _ = _G.AutoSaw
+    local _ = _G.AutoTridentW2
+    local _ = _G.AutoEvoRace
+    local _ = _G.AutoGetQuestBounty
+    local _ = _G.MarinesCoat
+    local _ = _G.TravelDres
+    local _ = _G.Defeating
+    local _ = _G.DummyMan
+    local _ = _G.Auto_Yama
+    local _ = _G.Auto_SwanGG
+    local _ = _G.SwanCoat
+    local _ = _G.AutoEcBoss
+    local _ = _G.Auto_Mink
+    local _ = _G.Auto_Human
+    local _ = _G.Auto_Skypiea
+    local _ = _G.Auto_Fish
+    local _ = _G.CDK_TS
+    local _ = _G.CDK_YM
+    local _ = _G.CDK
+    local _ = _G.AutoFarmGodChalice
+    local _ = _G.Teleport
+    local _ = _G.AutoKilo
+    local _ = _G.AutoGetUsoap
+    local _ = _G.Praying
+    local _ = _G.TryLucky
+    local _ = _G.AutoColShad
+    local _ = _G.AutoUnHaki
+    local _ = _G.Auto_DonAcces
+    local _ = _G.DragoV1
+    local _ = _G.FarmGodChalice
+    local _ = _G.IceBossRen
+    local _ = _G.BringMobsUser
+
+    fenv._B = false
+
+    task.wait(0.1)
+
+    local _ = _G.FarmMastery_S
+    local _ = _G.FarmMastery_G
+    local _ = _G.FarmMastery_Dev
+    local _ = _G.StartFarm
+    local _ = genv.AutoMaterial
+    local _ = _G.WardenBoss
+    local _ = _G.AutoFactory
+    local _ = _G.HCM
+    local _ = _G.PGB
+    local _ = _G.UPGDrago
+    local _ = _G.AutoFireFlowers
+    local _ = _G.DT_Uzoth
+    local _ = _G.AutoBerry
+    local _ = _G.CollectPresent
+    local _ = _G.AutoPhoenixF
+    local _ = _G.AutoHytHallow
+    local _ = _G.LongsWord
+    local _ = _G.BlackSpikey
+    local _ = _G.AutoHolyTorch
+    local _ = _G.TrainDrago
+    local _ = _G.AutoSaber
+    local _ = _G.CitizenQuest
+    local _ = _G.AutoEctoplasm
+    local _ = _G.KeysRen
+    local _ = _G.Auto_Rainbow_Haki
+    local _ = _G.AutoBigmom
+    local _ = _G.AuraBoss
+    local _ = _G.Auto_Cavender
+    local _ = _G.FarmEliteHunt
+    local _ = _G.AutoZou
+    local _ = _G.AcientOne
+    local _ = _G.AutoFarmNear
+    local _ = _G.AutoRaidCastle
+    local _ = _G.Addealer
+    local _ = _G.TwinHook
+    local _ = _G.Auto
+    local _ = _G.Auto_Def_DarkCoat
+    local _ = _G.AutoMatSoul
+    local _ = _G.AutoSerpentBow
+    local _ = _G.AutoFMon
+    local _ = _G.Auto_Soul_Guitar
+    local _ = _G.AutoSaw
+    local _ = _G.AutoTridentW2
+    local _ = _G.AutoEvoRace
+    local _ = _G.AutoGetQuestBounty
+    local _ = _G.MarinesCoat
+    local _ = _G.TravelDres
+    local _ = _G.Defeating
+    local _ = _G.DummyMan
+    local _ = _G.Auto_Yama
+    local _ = _G.Auto_SwanGG
+    local _ = _G.SwanCoat
+    local _ = _G.AutoEcBoss
+    local _ = _G.Auto_Mink
+    local _ = _G.Auto_Human
+    local _ = _G.Auto_Skypiea
+    local _ = _G.Auto_Fish
+    local _ = _G.CDK_TS
+    local _ = _G.CDK_YM
+    local _ = _G.CDK
+    local _ = _G.AutoFarmGodChalice
+    local _ = _G.Teleport
+    local _ = _G.AutoKilo
+    local _ = _G.AutoGetUsoap
+    local _ = _G.Praying
+    local _ = _G.TryLucky
+    local _ = _G.AutoColShad
+    local _ = _G.AutoUnHaki
+    local _ = _G.Auto_DonAcces
+    local _ = _G.DragoV1
+    local _ = _G.FarmGodChalice
+    local _ = _G.IceBossRen
+    local _ = _G.BringMobsUser
+
+    fenv._B = false
+
+    task.wait(0.1)
+
+    local _ = _G.FarmMastery_S
+    local _ = _G.FarmMastery_G
+    local _ = _G.FarmMastery_Dev
+    local _ = _G.StartFarm
+    local _ = genv.AutoMaterial
+    local _ = _G.WardenBoss
+    local _ = _G.AutoFactory
+    local _ = _G.HCM
+    local _ = _G.PGB
+    local _ = _G.UPGDrago
+    local _ = _G.AutoFireFlowers
+    local _ = _G.DT_Uzoth
+    local _ = _G.AutoBerry
+    local _ = _G.CollectPresent
+    local _ = _G.AutoPhoenixF
+    local _ = _G.AutoHytHallow
+    local _ = _G.LongsWord
+    local _ = _G.BlackSpikey
+    local _ = _G.AutoHolyTorch
+    local _ = _G.TrainDrago
+    local _ = _G.AutoSaber
+    local _ = _G.CitizenQuest
+    local _ = _G.AutoEctoplasm
+    local _ = _G.KeysRen
+    local _ = _G.Auto_Rainbow_Haki
+    local _ = _G.AutoBigmom
+    local _ = _G.AuraBoss
+    local _ = _G.Auto_Cavender
+    local _ = _G.FarmEliteHunt
+    local _ = _G.AutoZou
+    local _ = _G.AcientOne
+    local _ = _G.AutoFarmNear
+    local _ = _G.AutoRaidCastle
+    local _ = _G.Addealer
+    local _ = _G.TwinHook
+    local _ = _G.Auto
+    local _ = _G.Auto_Def_DarkCoat
+    local _ = _G.AutoMatSoul
+    local _ = _G.AutoSerpentBow
+    local _ = _G.AutoFMon
+    local _ = _G.Auto_Soul_Guitar
+    local _ = _G.AutoSaw
+    local _ = _G.AutoTridentW2
+    local _ = _G.AutoEvoRace
+    local _ = _G.AutoGetQuestBounty
+    local _ = _G.MarinesCoat
+    local _ = _G.TravelDres
+    local _ = _G.Defeating
+    local _ = _G.DummyMan
+    local _ = _G.Auto_Yama
+    local _ = _G.Auto_SwanGG
+    local _ = _G.SwanCoat
+    local _ = _G.AutoEcBoss
+    local _ = _G.Auto_Mink
+    local _ = _G.Auto_Human
+    local _ = _G.Auto_Skypiea
+    local _ = _G.Auto_Fish
+    local _ = _G.CDK_TS
+    local _ = _G.CDK_YM
+    local _ = _G.CDK
+    local _ = _G.AutoFarmGodChalice
+    local _ = _G.Teleport
+    local _ = _G.AutoKilo
+    local _ = _G.AutoGetUsoap
+    local _ = _G.Praying
+    local _ = _G.TryLucky
+    local _ = _G.AutoColShad
+    local _ = _G.AutoUnHaki
+    local _ = _G.Auto_DonAcces
+    local _ = _G.DragoV1
+    local _ = _G.FarmGodChalice
+    local _ = _G.IceBossRen
+    local _ = _G.BringMobsUser
+
+    fenv._B = false
+
+    task.wait(0.1)
+
+    local _ = _G.FarmMastery_S
+    local _ = _G.FarmMastery_G
+    local _ = _G.FarmMastery_Dev
+    local _ = _G.StartFarm
+    local _ = genv.AutoMaterial
+    local _ = _G.WardenBoss
+    local _ = _G.AutoFactory
+    local _ = _G.HCM
+    local _ = _G.PGB
+    local _ = _G.UPGDrago
+    local _ = _G.AutoFireFlowers
+    local _ = _G.DT_Uzoth
+    local _ = _G.AutoBerry
+    local _ = _G.CollectPresent
+    local _ = _G.AutoPhoenixF
+    local _ = _G.AutoHytHallow
+    local _ = _G.LongsWord
+    local _ = _G.BlackSpikey
+    local _ = _G.AutoHolyTorch
+    local _ = _G.TrainDrago
+    local _ = _G.AutoSaber
+    local _ = _G.CitizenQuest
+    local _ = _G.AutoEctoplasm
+    local _ = _G.KeysRen
+    local _ = _G.Auto_Rainbow_Haki
+    local _ = _G.AutoBigmom
+    local _ = _G.AuraBoss
+    local _ = _G.Auto_Cavender
+    local _ = _G.FarmEliteHunt
+    local _ = _G.AutoZou
+    local _ = _G.AcientOne
+    local _ = _G.AutoFarmNear
+    local _ = _G.AutoRaidCastle
+    local _ = _G.Addealer
+    local _ = _G.TwinHook
+    local _ = _G.Auto
+    local _ = _G.Auto_Def_DarkCoat
+    local _ = _G.AutoMatSoul
+    local _ = _G.AutoSerpentBow
+    local _ = _G.AutoFMon
+    local _ = _G.Auto_Soul_Guitar
+    local _ = _G.AutoSaw
+    local _ = _G.AutoTridentW2
+    local _ = _G.AutoEvoRace
+    local _ = _G.AutoGetQuestBounty
+    local _ = _G.MarinesCoat
+    local _ = _G.TravelDres
+    local _ = _G.Defeating
+    local _ = _G.DummyMan
+    local _ = _G.Auto_Yama
+    local _ = _G.Auto_SwanGG
+    local _ = _G.SwanCoat
+    local _ = _G.AutoEcBoss
+    local _ = _G.Auto_Mink
+    local _ = _G.Auto_Human
+    local _ = _G.Auto_Skypiea
+    local _ = _G.Auto_Fish
+    local _ = _G.CDK_TS
+    local _ = _G.CDK_YM
+    local _ = _G.CDK
+    local _ = _G.AutoFarmGodChalice
+    local _ = _G.Teleport
+    local _ = _G.AutoKilo
+    local _ = _G.AutoGetUsoap
+    local _ = _G.Praying
+    local _ = _G.TryLucky
+    local _ = _G.AutoColShad
+    local _ = _G.AutoUnHaki
+    local _ = _G.Auto_DonAcces
+    local _ = _G.DragoV1
+    local _ = _G.FarmGodChalice
+    local _ = _G.IceBossRen
+    local _ = _G.BringMobsUser
+
+    fenv._B = false
+
+    task.wait(0.1)
+
+    local _ = _G.FarmMastery_S
+    local _ = _G.FarmMastery_G
+    local _ = _G.FarmMastery_Dev
+    local _ = _G.StartFarm
+    local _ = genv.AutoMaterial
+    local _ = _G.WardenBoss
+    local _ = _G.AutoFactory
+    local _ = _G.HCM
+    local _ = _G.PGB
+    local _ = _G.UPGDrago
+    local _ = _G.AutoFireFlowers
+    local _ = _G.DT_Uzoth
+    local _ = _G.AutoBerry
+    local _ = _G.CollectPresent
+    local _ = _G.AutoPhoenixF
+    local _ = _G.AutoHytHallow
+    local _ = _G.LongsWord
+    local _ = _G.BlackSpikey
+    local _ = _G.AutoHolyTorch
+    local _ = _G.TrainDrago
+    local _ = _G.AutoSaber
+    local _ = _G.CitizenQuest
+    local _ = _G.AutoEctoplasm
+    local _ = _G.KeysRen
+    local _ = _G.Auto_Rainbow_Haki
+    local _ = _G.AutoBigmom
+    local _ = _G.AuraBoss
+    local _ = _G.Auto_Cavender
+    local _ = _G.FarmEliteHunt
+    local _ = _G.AutoZou
+    local _ = _G.AcientOne
+    local _ = _G.AutoFarmNear
+    local _ = _G.AutoRaidCastle
+    local _ = _G.Addealer
+    local _ = _G.TwinHook
+    local _ = _G.Auto
+    local _ = _G.Auto_Def_DarkCoat
+    local _ = _G.AutoMatSoul
+    local _ = _G.AutoSerpentBow
+    local _ = _G.AutoFMon
+    local _ = _G.Auto_Soul_Guitar
+    local _ = _G.AutoSaw
+    local _ = _G.AutoTridentW2
+    local _ = _G.AutoEvoRace
+    local _ = _G.AutoGetQuestBounty
+    local _ = _G.MarinesCoat
+    local _ = _G.TravelDres
+    local _ = _G.Defeating
+    local _ = _G.DummyMan
+    local _ = _G.Auto_Yama
+    local _ = _G.Auto_SwanGG
+    local _ = _G.SwanCoat
+    local _ = _G.AutoEcBoss
+    local _ = _G.Auto_Mink
+    local _ = _G.Auto_Human
+    local _ = _G.Auto_Skypiea
+    local _ = _G.Auto_Fish
+    local _ = _G.CDK_TS
+    local _ = _G.CDK_YM
+    local _ = _G.CDK
+    local _ = _G.AutoFarmGodChalice
+    local _ = _G.Teleport
+    local _ = _G.AutoKilo
+    local _ = _G.AutoGetUsoap
+    local _ = _G.Praying
+    local _ = _G.TryLucky
+    local _ = _G.AutoColShad
+    local _ = _G.AutoUnHaki
+    local _ = _G.Auto_DonAcces
+    local _ = _G.DragoV1
+    local _ = _G.FarmGodChalice
+    local _ = _G.IceBossRen
+    local _ = _G.BringMobsUser
+
+    fenv._B = false
+
+    task.wait(0.1)
+
+    local _ = _G.FarmMastery_S
+    local _ = _G.FarmMastery_G
+    local _ = _G.FarmMastery_Dev
+    local _ = _G.StartFarm
+    local _ = genv.AutoMaterial
+    local _ = _G.WardenBoss
+    local _ = _G.AutoFactory
+    local _ = _G.HCM
+    local _ = _G.PGB
+    local _ = _G.UPGDrago
+    local _ = _G.AutoFireFlowers
+    local _ = _G.DT_Uzoth
+    local _ = _G.AutoBerry
+    local _ = _G.CollectPresent
+    local _ = _G.AutoPhoenixF
+    local _ = _G.AutoHytHallow
+    local _ = _G.LongsWord
+    local _ = _G.BlackSpikey
+    local _ = _G.AutoHolyTorch
+    local _ = _G.TrainDrago
+    local _ = _G.AutoSaber
+    local _ = _G.CitizenQuest
+    local _ = _G.AutoEctoplasm
+    local _ = _G.KeysRen
+    local _ = _G.Auto_Rainbow_Haki
+    local _ = _G.AutoBigmom
+    local _ = _G.AuraBoss
+    local _ = _G.Auto_Cavender
+    local _ = _G.FarmEliteHunt
+    local _ = _G.AutoZou
+    local _ = _G.AcientOne
+    local _ = _G.AutoFarmNear
+    local _ = _G.AutoRaidCastle
+    local _ = _G.Addealer
+    local _ = _G.TwinHook
+    local _ = _G.Auto
+    local _ = _G.Auto_Def_DarkCoat
+    local _ = _G.AutoMatSoul
+    local _ = _G.AutoSerpentBow
+    local _ = _G.AutoFMon
+    local _ = _G.Auto_Soul_Guitar
+    local _ = _G.AutoSaw
+    local _ = _G.AutoTridentW2
+    local _ = _G.AutoEvoRace
+    local _ = _G.AutoGetQuestBounty
+    local _ = _G.MarinesCoat
+    local _ = _G.TravelDres
+    local _ = _G.Defeating
+    local _ = _G.DummyMan
+    local _ = _G.Auto_Yama
+    local _ = _G.Auto_SwanGG
+    local _ = _G.SwanCoat
+    local _ = _G.AutoEcBoss
+    local _ = _G.Auto_Mink
+    local _ = _G.Auto_Human
+    local _ = _G.Auto_Skypiea
+    local _ = _G.Auto_Fish
+    local _ = _G.CDK_TS
+    local _ = _G.CDK_YM
+    local _ = _G.CDK
+    local _ = _G.AutoFarmGodChalice
+    local _ = _G.Teleport
+    local _ = _G.AutoKilo
+    local _ = _G.AutoGetUsoap
+    local _ = _G.Praying
+    local _ = _G.TryLucky
+    local _ = _G.AutoColShad
+    local _ = _G.AutoUnHaki
+    local _ = _G.Auto_DonAcces
+    local _ = _G.DragoV1
+    local _ = _G.FarmGodChalice
+    local _ = _G.IceBossRen
+    local _ = _G.BringMobsUser
+
+    fenv._B = false
+
+    task.wait(0.1)
+
+    local _ = _G.FarmMastery_S
+    local _ = _G.FarmMastery_G
+    local _ = _G.FarmMastery_Dev
+    local _ = _G.StartFarm
+    local _ = genv.AutoMaterial
+    local _ = _G.WardenBoss
+    local _ = _G.AutoFactory
+    local _ = _G.HCM
+    local _ = _G.PGB
+    local _ = _G.UPGDrago
+    local _ = _G.AutoFireFlowers
+    local _ = _G.DT_Uzoth
+    local _ = _G.AutoBerry
+    local _ = _G.CollectPresent
+    local _ = _G.AutoPhoenixF
+    local _ = _G.AutoHytHallow
+    local _ = _G.LongsWord
+    local _ = _G.BlackSpikey
+    local _ = _G.AutoHolyTorch
+    local _ = _G.TrainDrago
+    local _ = _G.AutoSaber
+    local _ = _G.CitizenQuest
+    local _ = _G.AutoEctoplasm
+    local _ = _G.KeysRen
+    local _ = _G.Auto_Rainbow_Haki
+    local _ = _G.AutoBigmom
+    local _ = _G.AuraBoss
+    local _ = _G.Auto_Cavender
+    local _ = _G.FarmEliteHunt
+    local _ = _G.AutoZou
+    local _ = _G.AcientOne
+    local _ = _G.AutoFarmNear
+    local _ = _G.AutoRaidCastle
+    local _ = _G.Addealer
+    local _ = _G.TwinHook
+    local _ = _G.Auto
+    local _ = _G.Auto_Def_DarkCoat
+    local _ = _G.AutoMatSoul
+    local _ = _G.AutoSerpentBow
+    local _ = _G.AutoFMon
+    local _ = _G.Auto_Soul_Guitar
+    local _ = _G.AutoSaw
+    local _ = _G.AutoTridentW2
+    local _ = _G.AutoEvoRace
+    local _ = _G.AutoGetQuestBounty
+    local _ = _G.MarinesCoat
+    local _ = _G.TravelDres
+    local _ = _G.Defeating
+    local _ = _G.DummyMan
+    local _ = _G.Auto_Yama
+    local _ = _G.Auto_SwanGG
+    local _ = _G.SwanCoat
+    local _ = _G.AutoEcBoss
+    local _ = _G.Auto_Mink
+    local _ = _G.Auto_Human
+    local _ = _G.Auto_Skypiea
+    local _ = _G.Auto_Fish
+    local _ = _G.CDK_TS
+    local _ = _G.CDK_YM
+    local _ = _G.CDK
+    local _ = _G.AutoFarmGodChalice
+    local _ = _G.Teleport
+    local _ = _G.AutoKilo
+    local _ = _G.AutoGetUsoap
+    local _ = _G.Praying
+    local _ = _G.TryLucky
+    local _ = _G.AutoColShad
+    local _ = _G.AutoUnHaki
+    local _ = _G.Auto_DonAcces
+    local _ = _G.DragoV1
+    local _ = _G.FarmGodChalice
+    local _ = _G.IceBossRen
+    local _ = _G.BringMobsUser
+
+    fenv._B = false
+
+    task.wait(0.1)
+
+    local _ = _G.FarmMastery_S
+    local _ = _G.FarmMastery_G
+    local _ = _G.FarmMastery_Dev
+    local _ = _G.StartFarm
+    local _ = genv.AutoMaterial
+    local _ = _G.WardenBoss
+    local _ = _G.AutoFactory
+    local _ = _G.HCM
+    local _ = _G.PGB
+    local _ = _G.UPGDrago
+    local _ = _G.AutoFireFlowers
+    local _ = _G.DT_Uzoth
+    local _ = _G.AutoBerry
+    local _ = _G.CollectPresent
+    local _ = _G.AutoPhoenixF
+    local _ = _G.AutoHytHallow
+    local _ = _G.LongsWord
+    local _ = _G.BlackSpikey
+    local _ = _G.AutoHolyTorch
+    local _ = _G.TrainDrago
+    local _ = _G.AutoSaber
+    local _ = _G.CitizenQuest
+    local _ = _G.AutoEctoplasm
+    local _ = _G.KeysRen
+    local _ = _G.Auto_Rainbow_Haki
+    local _ = _G.AutoBigmom
+    local _ = _G.AuraBoss
+    local _ = _G.Auto_Cavender
+    local _ = _G.FarmEliteHunt
+    local _ = _G.AutoZou
+    local _ = _G.AcientOne
+    local _ = _G.AutoFarmNear
+    local _ = _G.AutoRaidCastle
+    local _ = _G.Addealer
+    local _ = _G.TwinHook
+    local _ = _G.Auto
+    local _ = _G.Auto_Def_DarkCoat
+    local _ = _G.AutoMatSoul
+    local _ = _G.AutoSerpentBow
+    local _ = _G.AutoFMon
+    local _ = _G.Auto_Soul_Guitar
+    local _ = _G.AutoSaw
+    local _ = _G.AutoTridentW2
+    local _ = _G.AutoEvoRace
+    local _ = _G.AutoGetQuestBounty
+    local _ = _G.MarinesCoat
+    local _ = _G.TravelDres
+    local _ = _G.Defeating
+    local _ = _G.DummyMan
+    local _ = _G.Auto_Yama
+    local _ = _G.Auto_SwanGG
+    local _ = _G.SwanCoat
+    local _ = _G.AutoEcBoss
+    local _ = _G.Auto_Mink
+    local _ = _G.Auto_Human
+    local _ = _G.Auto_Skypiea
+    local _ = _G.Auto_Fish
+    local _ = _G.CDK_TS
+    local _ = _G.CDK_YM
+    local _ = _G.CDK
+    local _ = _G.AutoFarmGodChalice
+    local _ = _G.Teleport
+    local _ = _G.AutoKilo
+    local _ = _G.AutoGetUsoap
+    local _ = _G.Praying
+    local _ = _G.TryLucky
+    local _ = _G.AutoColShad
+    local _ = _G.AutoUnHaki
+    local _ = _G.Auto_DonAcces
+    local _ = _G.DragoV1
+    local _ = _G.FarmGodChalice
+    local _ = _G.IceBossRen
+    local _ = _G.BringMobsUser
+
+    fenv._B = false
+
+    task.wait(0.1)
+
+    local _ = _G.FarmMastery_S
+    local _ = _G.FarmMastery_G
+    local _ = _G.FarmMastery_Dev
+    local _ = _G.StartFarm
+    local _ = genv.AutoMaterial
+    local _ = _G.WardenBoss
+    local _ = _G.AutoFactory
+    local _ = _G.HCM
+    local _ = _G.PGB
+    local _ = _G.UPGDrago
+    local _ = _G.AutoFireFlowers
+    local _ = _G.DT_Uzoth
+    local _ = _G.AutoBerry
+    local _ = _G.CollectPresent
+    local _ = _G.AutoPhoenixF
+    local _ = _G.AutoHytHallow
+    local _ = _G.LongsWord
+    local _ = _G.BlackSpikey
+    local _ = _G.AutoHolyTorch
+    local _ = _G.TrainDrago
+    local _ = _G.AutoSaber
+    local _ = _G.CitizenQuest
+    local _ = _G.AutoEctoplasm
+    local _ = _G.KeysRen
+    local _ = _G.Auto_Rainbow_Haki
+    local _ = _G.AutoBigmom
+    local _ = _G.AuraBoss
+    local _ = _G.Auto_Cavender
+    local _ = _G.FarmEliteHunt
+    local _ = _G.AutoZou
+    local _ = _G.AcientOne
+    local _ = _G.AutoFarmNear
+    local _ = _G.AutoRaidCastle
+    local _ = _G.Addealer
+    local _ = _G.TwinHook
+    local _ = _G.Auto
+    local _ = _G.Auto_Def_DarkCoat
+    local _ = _G.AutoMatSoul
+    local _ = _G.AutoSerpentBow
+    local _ = _G.AutoFMon
+    local _ = _G.Auto_Soul_Guitar
+    local _ = _G.AutoSaw
+    local _ = _G.AutoTridentW2
+    local _ = _G.AutoEvoRace
+    local _ = _G.AutoGetQuestBounty
+    local _ = _G.MarinesCoat
+    local _ = _G.TravelDres
+    local _ = _G.Defeating
+    local _ = _G.DummyMan
+    local _ = _G.Auto_Yama
+    local _ = _G.Auto_SwanGG
+    local _ = _G.SwanCoat
+    local _ = _G.AutoEcBoss
+    local _ = _G.Auto_Mink
+    local _ = _G.Auto_Human
+    local _ = _G.Auto_Skypiea
+    local _ = _G.Auto_Fish
+    local _ = _G.CDK_TS
+    local _ = _G.CDK_YM
+    local _ = _G.CDK
+    local _ = _G.AutoFarmGodChalice
+    local _ = _G.Teleport
+    local _ = _G.AutoKilo
+    local _ = _G.AutoGetUsoap
+    local _ = _G.Praying
+    local _ = _G.TryLucky
+    local _ = _G.AutoColShad
+    local _ = _G.AutoUnHaki
+    local _ = _G.Auto_DonAcces
+    local _ = _G.DragoV1
+    local _ = _G.FarmGodChalice
+    local _ = _G.IceBossRen
+    local _ = _G.BringMobsUser
+
+    fenv._B = false
+
+    task.wait(0.1)
+
+    local _ = _G.FarmMastery_S
+    local _ = _G.FarmMastery_G
+    local _ = _G.FarmMastery_Dev
+    local _ = _G.StartFarm
+    local _ = genv.AutoMaterial
+    local _ = _G.WardenBoss
+    local _ = _G.AutoFactory
+    local _ = _G.HCM
+    local _ = _G.PGB
+    local _ = _G.UPGDrago
+    local _ = _G.AutoFireFlowers
+    local _ = _G.DT_Uzoth
+    local _ = _G.AutoBerry
+    local _ = _G.CollectPresent
+    local _ = _G.AutoPhoenixF
+    local _ = _G.AutoHytHallow
+    local _ = _G.LongsWord
+    local _ = _G.BlackSpikey
+    local _ = _G.AutoHolyTorch
+    local _ = _G.TrainDrago
+    local _ = _G.AutoSaber
+    local _ = _G.CitizenQuest
+    local _ = _G.AutoEctoplasm
+    local _ = _G.KeysRen
+    local _ = _G.Auto_Rainbow_Haki
+    local _ = _G.AutoBigmom
+    local _ = _G.AuraBoss
+    local _ = _G.Auto_Cavender
+    local _ = _G.FarmEliteHunt
+    local _ = _G.AutoZou
+    local _ = _G.AcientOne
+    local _ = _G.AutoFarmNear
+    local _ = _G.AutoRaidCastle
+    local _ = _G.Addealer
+    local _ = _G.TwinHook
+    local _ = _G.Auto
+    local _ = _G.Auto_Def_DarkCoat
+    local _ = _G.AutoMatSoul
+    local _ = _G.AutoSerpentBow
+    local _ = _G.AutoFMon
+    local _ = _G.Auto_Soul_Guitar
+    local _ = _G.AutoSaw
+    local _ = _G.AutoTridentW2
+    local _ = _G.AutoEvoRace
+    local _ = _G.AutoGetQuestBounty
+    local _ = _G.MarinesCoat
+    local _ = _G.TravelDres
+    local _ = _G.Defeating
+    local _ = _G.DummyMan
+    local _ = _G.Auto_Yama
+    local _ = _G.Auto_SwanGG
+    local _ = _G.SwanCoat
+    local _ = _G.AutoEcBoss
+    local _ = _G.Auto_Mink
+    local _ = _G.Auto_Human
+    local _ = _G.Auto_Skypiea
+    local _ = _G.Auto_Fish
+    local _ = _G.CDK_TS
+    local _ = _G.CDK_YM
+    local _ = _G.CDK
+    local _ = _G.AutoFarmGodChalice
+    local _ = _G.Teleport
+    local _ = _G.AutoKilo
+    local _ = _G.AutoGetUsoap
+    local _ = _G.Praying
+    local _ = _G.TryLucky
+    local _ = _G.AutoColShad
+    local _ = _G.AutoUnHaki
+    local _ = _G.Auto_DonAcces
+    local _ = _G.DragoV1
+    local _ = _G.FarmGodChalice
+    local _ = _G.IceBossRen
+    local _ = _G.BringMobsUser
+
+    fenv._B = false
+
+    task.wait(0.1)
+
+    local _ = _G.FarmMastery_S
+    local _ = _G.FarmMastery_G
+    local _ = _G.FarmMastery_Dev
+    local _ = _G.StartFarm
+    local _ = genv.AutoMaterial
+    local _ = _G.WardenBoss
+    local _ = _G.AutoFactory
+    local _ = _G.HCM
+    local _ = _G.PGB
+    local _ = _G.UPGDrago
+    local _ = _G.AutoFireFlowers
+    local _ = _G.DT_Uzoth
+    local _ = _G.AutoBerry
+    local _ = _G.CollectPresent
+    local _ = _G.AutoPhoenixF
+    local _ = _G.AutoHytHallow
+    local _ = _G.LongsWord
+    local _ = _G.BlackSpikey
+    local _ = _G.AutoHolyTorch
+    local _ = _G.TrainDrago
+    local _ = _G.AutoSaber
+    local _ = _G.CitizenQuest
+    local _ = _G.AutoEctoplasm
+    local _ = _G.KeysRen
+    local _ = _G.Auto_Rainbow_Haki
+    local _ = _G.AutoBigmom
+    local _ = _G.AuraBoss
+    local _ = _G.Auto_Cavender
+    local _ = _G.FarmEliteHunt
+    local _ = _G.AutoZou
+    local _ = _G.AcientOne
+    local _ = _G.AutoFarmNear
+    local _ = _G.AutoRaidCastle
+    local _ = _G.Addealer
+    local _ = _G.TwinHook
+    local _ = _G.Auto
+    local _ = _G.Auto_Def_DarkCoat
+    local _ = _G.AutoMatSoul
+    local _ = _G.AutoSerpentBow
+    local _ = _G.AutoFMon
+    local _ = _G.Auto_Soul_Guitar
+    local _ = _G.AutoSaw
+    local _ = _G.AutoTridentW2
+    local _ = _G.AutoEvoRace
+    local _ = _G.AutoGetQuestBounty
+    local _ = _G.MarinesCoat
+    local _ = _G.TravelDres
+    local _ = _G.Defeating
+    local _ = _G.DummyMan
+    local _ = _G.Auto_Yama
+    local _ = _G.Auto_SwanGG
+    local _ = _G.SwanCoat
+    local _ = _G.AutoEcBoss
+    local _ = _G.Auto_Mink
+    local _ = _G.Auto_Human
+    local _ = _G.Auto_Skypiea
+    local _ = _G.Auto_Fish
+    local _ = _G.CDK_TS
+    local _ = _G.CDK_YM
+    local _ = _G.CDK
+    local _ = _G.AutoFarmGodChalice
+    local _ = _G.Teleport
+    local _ = _G.AutoKilo
+    local _ = _G.AutoGetUsoap
+    local _ = _G.Praying
+    local _ = _G.TryLucky
+    local _ = _G.AutoColShad
+    local _ = _G.AutoUnHaki
+    local _ = _G.Auto_DonAcces
+    local _ = _G.DragoV1
+    local _ = _G.FarmGodChalice
+    local _ = _G.IceBossRen
+    local _ = _G.BringMobsUser
+
+    fenv._B = false
+
+    task.wait(0.1)
+
+    local _ = _G.FarmMastery_S
+    local _ = _G.FarmMastery_G
+    local _ = _G.FarmMastery_Dev
+    local _ = _G.StartFarm
+    local _ = genv.AutoMaterial
+    local _ = _G.WardenBoss
+    local _ = _G.AutoFactory
+    local _ = _G.HCM
+    local _ = _G.PGB
+    local _ = _G.UPGDrago
+    local _ = _G.AutoFireFlowers
+    local _ = _G.DT_Uzoth
+    local _ = _G.AutoBerry
+    local _ = _G.CollectPresent
+    local _ = _G.AutoPhoenixF
+    local _ = _G.AutoHytHallow
+    local _ = _G.LongsWord
+    local _ = _G.BlackSpikey
+    local _ = _G.AutoHolyTorch
+    local _ = _G.TrainDrago
+    local _ = _G.AutoSaber
+    local _ = _G.CitizenQuest
+    local _ = _G.AutoEctoplasm
+    local _ = _G.KeysRen
+    local _ = _G.Auto_Rainbow_Haki
+    local _ = _G.AutoBigmom
+    local _ = _G.AuraBoss
+    local _ = _G.Auto_Cavender
+    local _ = _G.FarmEliteHunt
+    local _ = _G.AutoZou
+    local _ = _G.AcientOne
+    local _ = _G.AutoFarmNear
+    local _ = _G.AutoRaidCastle
+    local _ = _G.Addealer
+    local _ = _G.TwinHook
+    local _ = _G.Auto
+    local _ = _G.Auto_Def_DarkCoat
+    local _ = _G.AutoMatSoul
+    local _ = _G.AutoSerpentBow
+    local _ = _G.AutoFMon
+    local _ = _G.Auto_Soul_Guitar
+    local _ = _G.AutoSaw
+    local _ = _G.AutoTridentW2
+    local _ = _G.AutoEvoRace
+    local _ = _G.AutoGetQuestBounty
+    local _ = _G.MarinesCoat
+    local _ = _G.TravelDres
+    local _ = _G.Defeating
+    local _ = _G.DummyMan
+    local _ = _G.Auto_Yama
+    local _ = _G.Auto_SwanGG
+    local _ = _G.SwanCoat
+    local _ = _G.AutoEcBoss
+    local _ = _G.Auto_Mink
+    local _ = _G.Auto_Human
+    local _ = _G.Auto_Skypiea
+    local _ = _G.Auto_Fish
+    local _ = _G.CDK_TS
+    local _ = _G.CDK_YM
+    local _ = _G.CDK
+    local _ = _G.AutoFarmGodChalice
+    local _ = _G.Teleport
+    local _ = _G.AutoKilo
+    local _ = _G.AutoGetUsoap
+    local _ = _G.Praying
+    local _ = _G.TryLucky
+    local _ = _G.AutoColShad
+    local _ = _G.AutoUnHaki
+    local _ = _G.Auto_DonAcces
+    local _ = _G.DragoV1
+    local _ = _G.FarmGodChalice
+    local _ = _G.IceBossRen
+    local _ = _G.BringMobsUser
+
+    fenv._B = false
+
+    task.wait(0.1)
+
+    local _ = _G.FarmMastery_S
+    local _ = _G.FarmMastery_G
+    local _ = _G.FarmMastery_Dev
+    local _ = _G.StartFarm
+    local _ = genv.AutoMaterial
+    local _ = _G.WardenBoss
+    local _ = _G.AutoFactory
+    local _ = _G.HCM
+    local _ = _G.PGB
+    local _ = _G.UPGDrago
+    local _ = _G.AutoFireFlowers
+    local _ = _G.DT_Uzoth
+    local _ = _G.AutoBerry
+    local _ = _G.CollectPresent
+    local _ = _G.AutoPhoenixF
+    local _ = _G.AutoHytHallow
+    local _ = _G.LongsWord
+    local _ = _G.BlackSpikey
+    local _ = _G.AutoHolyTorch
+    local _ = _G.TrainDrago
+    local _ = _G.AutoSaber
+    local _ = _G.CitizenQuest
+    local _ = _G.AutoEctoplasm
+    local _ = _G.KeysRen
+    local _ = _G.Auto_Rainbow_Haki
+    local _ = _G.AutoBigmom
+    local _ = _G.AuraBoss
+    local _ = _G.Auto_Cavender
+    local _ = _G.FarmEliteHunt
+    local _ = _G.AutoZou
+    local _ = _G.AcientOne
+    local _ = _G.AutoFarmNear
+    local _ = _G.AutoRaidCastle
+    local _ = _G.Addealer
+    local _ = _G.TwinHook
+    local _ = _G.Auto
+    local _ = _G.Auto_Def_DarkCoat
+    local _ = _G.AutoMatSoul
+    local _ = _G.AutoSerpentBow
+    local _ = _G.AutoFMon
+    local _ = _G.Auto_Soul_Guitar
+    local _ = _G.AutoSaw
+    local _ = _G.AutoTridentW2
+    local _ = _G.AutoEvoRace
+    local _ = _G.AutoGetQuestBounty
+    local _ = _G.MarinesCoat
+    local _ = _G.TravelDres
+    local _ = _G.Defeating
+    local _ = _G.DummyMan
+    local _ = _G.Auto_Yama
+    local _ = _G.Auto_SwanGG
+    local _ = _G.SwanCoat
+    local _ = _G.AutoEcBoss
+    local _ = _G.Auto_Mink
+    local _ = _G.Auto_Human
+    local _ = _G.Auto_Skypiea
+    local _ = _G.Auto_Fish
+    local _ = _G.CDK_TS
+    local _ = _G.CDK_YM
+    local _ = _G.CDK
+    local _ = _G.AutoFarmGodChalice
+    local _ = _G.Teleport
+    local _ = _G.AutoKilo
+    local _ = _G.AutoGetUsoap
+    local _ = _G.Praying
+    local _ = _G.TryLucky
+    local _ = _G.AutoColShad
+    local _ = _G.AutoUnHaki
+    local _ = _G.Auto_DonAcces
+    local _ = _G.DragoV1
+    local _ = _G.FarmGodChalice
+    local _ = _G.IceBossRen
+    local _ = _G.BringMobsUser
+
+    fenv._B = false
+
+    task.wait(0.1)
+
+    local _ = _G.FarmMastery_S
+    local _ = _G.FarmMastery_G
+    local _ = _G.FarmMastery_Dev
+    local _ = _G.StartFarm
+    local _ = genv.AutoMaterial
+    local _ = _G.WardenBoss
+    local _ = _G.AutoFactory
+    local _ = _G.HCM
+    local _ = _G.PGB
+    local _ = _G.UPGDrago
+    local _ = _G.AutoFireFlowers
+    local _ = _G.DT_Uzoth
+    local _ = _G.AutoBerry
+    local _ = _G.CollectPresent
+    local _ = _G.AutoPhoenixF
+    local _ = _G.AutoHytHallow
+    local _ = _G.LongsWord
+    local _ = _G.BlackSpikey
+    local _ = _G.AutoHolyTorch
+    local _ = _G.TrainDrago
+    local _ = _G.AutoSaber
+    local _ = _G.CitizenQuest
+    local _ = _G.AutoEctoplasm
+    local _ = _G.KeysRen
+    local _ = _G.Auto_Rainbow_Haki
+    local _ = _G.AutoBigmom
+    local _ = _G.AuraBoss
+    local _ = _G.Auto_Cavender
+    local _ = _G.FarmEliteHunt
+    local _ = _G.AutoZou
+    local _ = _G.AcientOne
+    local _ = _G.AutoFarmNear
+    local _ = _G.AutoRaidCastle
+    local _ = _G.Addealer
+    local _ = _G.TwinHook
+    local _ = _G.Auto
+    local _ = _G.Auto_Def_DarkCoat
+    local _ = _G.AutoMatSoul
+    local _ = _G.AutoSerpentBow
+    local _ = _G.AutoFMon
+    local _ = _G.Auto_Soul_Guitar
+    local _ = _G.AutoSaw
+    local _ = _G.AutoTridentW2
+    local _ = _G.AutoEvoRace
+    local _ = _G.AutoGetQuestBounty
+    local _ = _G.MarinesCoat
+    local _ = _G.TravelDres
+    local _ = _G.Defeating
+    local _ = _G.DummyMan
+    local _ = _G.Auto_Yama
+    local _ = _G.Auto_SwanGG
+    local _ = _G.SwanCoat
+    local _ = _G.AutoEcBoss
+    local _ = _G.Auto_Mink
+    local _ = _G.Auto_Human
+    local _ = _G.Auto_Skypiea
+    local _ = _G.Auto_Fish
+    local _ = _G.CDK_TS
+    local _ = _G.CDK_YM
+    local _ = _G.CDK
+    local _ = _G.AutoFarmGodChalice
+    local _ = _G.Teleport
+    local _ = _G.AutoKilo
+    local _ = _G.AutoGetUsoap
+    local _ = _G.Praying
+    local _ = _G.TryLucky
+    local _ = _G.AutoColShad
+    local _ = _G.AutoUnHaki
+    local _ = _G.Auto_DonAcces
+    local _ = _G.DragoV1
+    local _ = _G.FarmGodChalice
+    local _ = _G.IceBossRen
+    local _ = _G.BringMobsUser
+
+    fenv._B = false
+
+    task.wait(0.1)
+
+    local _ = _G.FarmMastery_S
+    local _ = _G.FarmMastery_G
+    local _ = _G.FarmMastery_Dev
+    local _ = _G.StartFarm
+    local _ = genv.AutoMaterial
+    local _ = _G.WardenBoss
+    local _ = _G.AutoFactory
+    local _ = _G.HCM
+    local _ = _G.PGB
+    local _ = _G.UPGDrago
+    local _ = _G.AutoFireFlowers
+    local _ = _G.DT_Uzoth
+    local _ = _G.AutoBerry
+    local _ = _G.CollectPresent
+    local _ = _G.AutoPhoenixF
+    local _ = _G.AutoHytHallow
+    local _ = _G.LongsWord
+    local _ = _G.BlackSpikey
+    local _ = _G.AutoHolyTorch
+    local _ = _G.TrainDrago
+    local _ = _G.AutoSaber
+    local _ = _G.CitizenQuest
+    local _ = _G.AutoEctoplasm
+    local _ = _G.KeysRen
+    local _ = _G.Auto_Rainbow_Haki
+    local _ = _G.AutoBigmom
+    local _ = _G.AuraBoss
+    local _ = _G.Auto_Cavender
+    local _ = _G.FarmEliteHunt
+    local _ = _G.AutoZou
+    local _ = _G.AcientOne
+    local _ = _G.AutoFarmNear
+    local _ = _G.AutoRaidCastle
+    local _ = _G.Addealer
+    local _ = _G.TwinHook
+    local _ = _G.Auto
+    local _ = _G.Auto_Def_DarkCoat
+    local _ = _G.AutoMatSoul
+    local _ = _G.AutoSerpentBow
+    local _ = _G.AutoFMon
+    local _ = _G.Auto_Soul_Guitar
+    local _ = _G.AutoSaw
+    local _ = _G.AutoTridentW2
+    local _ = _G.AutoEvoRace
+    local _ = _G.AutoGetQuestBounty
+    local _ = _G.MarinesCoat
+    local _ = _G.TravelDres
+    local _ = _G.Defeating
+    local _ = _G.DummyMan
+    local _ = _G.Auto_Yama
+    local _ = _G.Auto_SwanGG
+    local _ = _G.SwanCoat
+    local _ = _G.AutoEcBoss
+    local _ = _G.Auto_Mink
+    local _ = _G.Auto_Human
+    local _ = _G.Auto_Skypiea
+    local _ = _G.Auto_Fish
+    local _ = _G.CDK_TS
+    local _ = _G.CDK_YM
+    local _ = _G.CDK
+    local _ = _G.AutoFarmGodChalice
+    local _ = _G.Teleport
+    local _ = _G.AutoKilo
+    local _ = _G.AutoGetUsoap
+    local _ = _G.Praying
+    local _ = _G.TryLucky
+    local _ = _G.AutoColShad
+    local _ = _G.AutoUnHaki
+    local _ = _G.Auto_DonAcces
+    local _ = _G.DragoV1
+    local _ = _G.FarmGodChalice
+    local _ = _G.IceBossRen
+    local _ = _G.BringMobsUser
+
+    fenv._B = false
+
+    task.wait(0.1)
+
+    local _ = _G.FarmMastery_S
+    local _ = _G.FarmMastery_G
+    local _ = _G.FarmMastery_Dev
+    local _ = _G.StartFarm
+    local _ = genv.AutoMaterial
+    local _ = _G.WardenBoss
+    local _ = _G.AutoFactory
+    local _ = _G.HCM
+    local _ = _G.PGB
+    local _ = _G.UPGDrago
+    local _ = _G.AutoFireFlowers
+    local _ = _G.DT_Uzoth
+    local _ = _G.AutoBerry
+    local _ = _G.CollectPresent
+    local _ = _G.AutoPhoenixF
+    local _ = _G.AutoHytHallow
+    local _ = _G.LongsWord
+    local _ = _G.BlackSpikey
+    local _ = _G.AutoHolyTorch
+    local _ = _G.TrainDrago
+    local _ = _G.AutoSaber
+    local _ = _G.CitizenQuest
+    local _ = _G.AutoEctoplasm
+    local _ = _G.KeysRen
+    local _ = _G.Auto_Rainbow_Haki
+    local _ = _G.AutoBigmom
+    local _ = _G.AuraBoss
+    local _ = _G.Auto_Cavender
+    local _ = _G.FarmEliteHunt
+    local _ = _G.AutoZou
+    local _ = _G.AcientOne
+    local _ = _G.AutoFarmNear
+    local _ = _G.AutoRaidCastle
+    local _ = _G.Addealer
+    local _ = _G.TwinHook
+    local _ = _G.Auto
+    local _ = _G.Auto_Def_DarkCoat
+    local _ = _G.AutoMatSoul
+    local _ = _G.AutoSerpentBow
+    local _ = _G.AutoFMon
+    local _ = _G.Auto_Soul_Guitar
+    local _ = _G.AutoSaw
+    local _ = _G.AutoTridentW2
+    local _ = _G.AutoEvoRace
+    local _ = _G.AutoGetQuestBounty
+    local _ = _G.MarinesCoat
+    local _ = _G.TravelDres
+    local _ = _G.Defeating
+    local _ = _G.DummyMan
+    local _ = _G.Auto_Yama
+    local _ = _G.Auto_SwanGG
+    local _ = _G.SwanCoat
+    local _ = _G.AutoEcBoss
+    local _ = _G.Auto_Mink
+    local _ = _G.Auto_Human
+    local _ = _G.Auto_Skypiea
+    local _ = _G.Auto_Fish
+    local _ = _G.CDK_TS
+    local _ = _G.CDK_YM
+    local _ = _G.CDK
+    local _ = _G.AutoFarmGodChalice
+    local _ = _G.Teleport
+    local _ = _G.AutoKilo
+    local _ = _G.AutoGetUsoap
+    local _ = _G.Praying
+    local _ = _G.TryLucky
+    local _ = _G.AutoColShad
+    local _ = _G.AutoUnHaki
+    local _ = _G.Auto_DonAcces
+    local _ = _G.DragoV1
+    local _ = _G.FarmGodChalice
+    local _ = _G.IceBossRen
+    local _ = _G.BringMobsUser
+
+    fenv._B = false
+
+    task.wait(0.1)
+
+    local _ = _G.FarmMastery_S
+    local _ = _G.FarmMastery_G
+    local _ = _G.FarmMastery_Dev
+    local _ = _G.StartFarm
+    local _ = genv.AutoMaterial
+    local _ = _G.WardenBoss
+    local _ = _G.AutoFactory
+    local _ = _G.HCM
+    local _ = _G.PGB
+    local _ = _G.UPGDrago
+    local _ = _G.AutoFireFlowers
+    local _ = _G.DT_Uzoth
+    local _ = _G.AutoBerry
+    local _ = _G.CollectPresent
+    local _ = _G.AutoPhoenixF
+    local _ = _G.AutoHytHallow
+    local _ = _G.LongsWord
+    local _ = _G.BlackSpikey
+    local _ = _G.AutoHolyTorch
+    local _ = _G.TrainDrago
+    local _ = _G.AutoSaber
+    local _ = _G.CitizenQuest
+    local _ = _G.AutoEctoplasm
+    local _ = _G.KeysRen
+    local _ = _G.Auto_Rainbow_Haki
+    local _ = _G.AutoBigmom
+    local _ = _G.AuraBoss
+    local _ = _G.Auto_Cavender
+    local _ = _G.FarmEliteHunt
+    local _ = _G.AutoZou
+    local _ = _G.AcientOne
+    local _ = _G.AutoFarmNear
+    local _ = _G.AutoRaidCastle
+    local _ = _G.Addealer
+    local _ = _G.TwinHook
+    local _ = _G.Auto
+    local _ = _G.Auto_Def_DarkCoat
+    local _ = _G.AutoMatSoul
+    local _ = _G.AutoSerpentBow
+    local _ = _G.AutoFMon
+    local _ = _G.Auto_Soul_Guitar
+    local _ = _G.AutoSaw
+    local _ = _G.AutoTridentW2
+    local _ = _G.AutoEvoRace
+    local _ = _G.AutoGetQuestBounty
+    local _ = _G.MarinesCoat
+    local _ = _G.TravelDres
+    local _ = _G.Defeating
+    local _ = _G.DummyMan
+    local _ = _G.Auto_Yama
+    local _ = _G.Auto_SwanGG
+    local _ = _G.SwanCoat
+    local _ = _G.AutoEcBoss
+    local _ = _G.Auto_Mink
+    local _ = _G.Auto_Human
+    local _ = _G.Auto_Skypiea
+    local _ = _G.Auto_Fish
+    local _ = _G.CDK_TS
+    local _ = _G.CDK_YM
+    local _ = _G.CDK
+    local _ = _G.AutoFarmGodChalice
+    local _ = _G.Teleport
+    local _ = _G.AutoKilo
+    local _ = _G.AutoGetUsoap
+    local _ = _G.Praying
+    local _ = _G.TryLucky
+    local _ = _G.AutoColShad
+    local _ = _G.AutoUnHaki
+    local _ = _G.Auto_DonAcces
+    local _ = _G.DragoV1
+    local _ = _G.FarmGodChalice
+    local _ = _G.IceBossRen
+    local _ = _G.BringMobsUser
+
+    fenv._B = false
+
+    task.wait(0.1)
+
+    local _ = _G.FarmMastery_S
+    local _ = _G.FarmMastery_G
+    local _ = _G.FarmMastery_Dev
+    local _ = _G.StartFarm
+    local _ = genv.AutoMaterial
+    local _ = _G.WardenBoss
+    local _ = _G.AutoFactory
+    local _ = _G.HCM
+    local _ = _G.PGB
+    local _ = _G.UPGDrago
+    local _ = _G.AutoFireFlowers
+    local _ = _G.DT_Uzoth
+    local _ = _G.AutoBerry
+    local _ = _G.CollectPresent
+    local _ = _G.AutoPhoenixF
+    local _ = _G.AutoHytHallow
+    local _ = _G.LongsWord
+    local _ = _G.BlackSpikey
+    local _ = _G.AutoHolyTorch
+    local _ = _G.TrainDrago
+    local _ = _G.AutoSaber
+    local _ = _G.CitizenQuest
+    local _ = _G.AutoEctoplasm
+    local _ = _G.KeysRen
+    local _ = _G.Auto_Rainbow_Haki
+    local _ = _G.AutoBigmom
+    local _ = _G.AuraBoss
+    local _ = _G.Auto_Cavender
+    local _ = _G.FarmEliteHunt
+    local _ = _G.AutoZou
+    local _ = _G.AcientOne
+    local _ = _G.AutoFarmNear
+    local _ = _G.AutoRaidCastle
+    local _ = _G.Addealer
+    local _ = _G.TwinHook
+    local _ = _G.Auto
+    local _ = _G.Auto_Def_DarkCoat
+    local _ = _G.AutoMatSoul
+    local _ = _G.AutoSerpentBow
+    local _ = _G.AutoFMon
+    local _ = _G.Auto_Soul_Guitar
+    local _ = _G.AutoSaw
+    local _ = _G.AutoTridentW2
+    local _ = _G.AutoEvoRace
+    local _ = _G.AutoGetQuestBounty
+    local _ = _G.MarinesCoat
+    local _ = _G.TravelDres
+    local _ = _G.Defeating
+    local _ = _G.DummyMan
+    local _ = _G.Auto_Yama
+    local _ = _G.Auto_SwanGG
+    local _ = _G.SwanCoat
+    local _ = _G.AutoEcBoss
+    local _ = _G.Auto_Mink
+    local _ = _G.Auto_Human
+    local _ = _G.Auto_Skypiea
+    local _ = _G.Auto_Fish
+    local _ = _G.CDK_TS
+    local _ = _G.CDK_YM
+    local _ = _G.CDK
+    local _ = _G.AutoFarmGodChalice
+    local _ = _G.Teleport
+    local _ = _G.AutoKilo
+    local _ = _G.AutoGetUsoap
+    local _ = _G.Praying
+    local _ = _G.TryLucky
+    local _ = _G.AutoColShad
+    local _ = _G.AutoUnHaki
+    local _ = _G.Auto_DonAcces
+    local _ = _G.DragoV1
+    local _ = _G.FarmGodChalice
+    local _ = _G.IceBossRen
+    local _ = _G.BringMobsUser
+
+    fenv._B = false
+
+    task.wait(0.1)
+
+    local _ = _G.FarmMastery_S
+    local _ = _G.FarmMastery_G
+    local _ = _G.FarmMastery_Dev
+    local _ = _G.StartFarm
+    local _ = genv.AutoMaterial
+    local _ = _G.WardenBoss
+    local _ = _G.AutoFactory
+    local _ = _G.HCM
+    local _ = _G.PGB
+    local _ = _G.UPGDrago
+    local _ = _G.AutoFireFlowers
+    local _ = _G.DT_Uzoth
+    local _ = _G.AutoBerry
+    local _ = _G.CollectPresent
+    local _ = _G.AutoPhoenixF
+    local _ = _G.AutoHytHallow
+    local _ = _G.LongsWord
+    local _ = _G.BlackSpikey
+    local _ = _G.AutoHolyTorch
+    local _ = _G.TrainDrago
+    local _ = _G.AutoSaber
+    local _ = _G.CitizenQuest
+    local _ = _G.AutoEctoplasm
+    local _ = _G.KeysRen
+    local _ = _G.Auto_Rainbow_Haki
+    local _ = _G.AutoBigmom
+    local _ = _G.AuraBoss
+    local _ = _G.Auto_Cavender
+    local _ = _G.FarmEliteHunt
+    local _ = _G.AutoZou
+    local _ = _G.AcientOne
+    local _ = _G.AutoFarmNear
+    local _ = _G.AutoRaidCastle
+    local _ = _G.Addealer
+    local _ = _G.TwinHook
+    local _ = _G.Auto
+    local _ = _G.Auto_Def_DarkCoat
+    local _ = _G.AutoMatSoul
+    local _ = _G.AutoSerpentBow
+    local _ = _G.AutoFMon
+    local _ = _G.Auto_Soul_Guitar
+    local _ = _G.AutoSaw
+    local _ = _G.AutoTridentW2
+    local _ = _G.AutoEvoRace
+    local _ = _G.AutoGetQuestBounty
+    local _ = _G.MarinesCoat
+    local _ = _G.TravelDres
+    local _ = _G.Defeating
+    local _ = _G.DummyMan
+    local _ = _G.Auto_Yama
+    local _ = _G.Auto_SwanGG
+    local _ = _G.SwanCoat
+    local _ = _G.AutoEcBoss
+    local _ = _G.Auto_Mink
+    local _ = _G.Auto_Human
+    local _ = _G.Auto_Skypiea
+    local _ = _G.Auto_Fish
+    local _ = _G.CDK_TS
+    local _ = _G.CDK_YM
+    local _ = _G.CDK
+    local _ = _G.AutoFarmGodChalice
+    local _ = _G.Teleport
+    local _ = _G.AutoKilo
+    local _ = _G.AutoGetUsoap
+    local _ = _G.Praying
+    local _ = _G.TryLucky
+    local _ = _G.AutoColShad
+    local _ = _G.AutoUnHaki
+    local _ = _G.Auto_DonAcces
+    local _ = _G.DragoV1
+    local _ = _G.FarmGodChalice
+    local _ = _G.IceBossRen
+    local _ = _G.BringMobsUser
+
+    fenv._B = false
+
+    task.wait(0.1)
+
+    local _ = _G.FarmMastery_S
+    local _ = _G.FarmMastery_G
+    local _ = _G.FarmMastery_Dev
+    local _ = _G.StartFarm
+    local _ = genv.AutoMaterial
+    local _ = _G.WardenBoss
+    local _ = _G.AutoFactory
+    local _ = _G.HCM
+    local _ = _G.PGB
+    local _ = _G.UPGDrago
+    local _ = _G.AutoFireFlowers
+    local _ = _G.DT_Uzoth
+    local _ = _G.AutoBerry
+    local _ = _G.CollectPresent
+    local _ = _G.AutoPhoenixF
+    local _ = _G.AutoHytHallow
+    local _ = _G.LongsWord
+    local _ = _G.BlackSpikey
+    local _ = _G.AutoHolyTorch
+    local _ = _G.TrainDrago
+    local _ = _G.AutoSaber
+    local _ = _G.CitizenQuest
+    local _ = _G.AutoEctoplasm
+    local _ = _G.KeysRen
+    local _ = _G.Auto_Rainbow_Haki
+    local _ = _G.AutoBigmom
+    local _ = _G.AuraBoss
+    local _ = _G.Auto_Cavender
+    local _ = _G.FarmEliteHunt
+    local _ = _G.AutoZou
+    local _ = _G.AcientOne
+    local _ = _G.AutoFarmNear
+    local _ = _G.AutoRaidCastle
+    local _ = _G.Addealer
+    local _ = _G.TwinHook
+    local _ = _G.Auto
+    local _ = _G.Auto_Def_DarkCoat
+    local _ = _G.AutoMatSoul
+    local _ = _G.AutoSerpentBow
+    local _ = _G.AutoFMon
+    local _ = _G.Auto_Soul_Guitar
+    local _ = _G.AutoSaw
+    local _ = _G.AutoTridentW2
+    local _ = _G.AutoEvoRace
+    local _ = _G.AutoGetQuestBounty
+    local _ = _G.MarinesCoat
+    local _ = _G.TravelDres
+    local _ = _G.Defeating
+    local _ = _G.DummyMan
+    local _ = _G.Auto_Yama
+    local _ = _G.Auto_SwanGG
+    local _ = _G.SwanCoat
+    local _ = _G.AutoEcBoss
+    local _ = _G.Auto_Mink
+    local _ = _G.Auto_Human
+    local _ = _G.Auto_Skypiea
+    local _ = _G.Auto_Fish
+    local _ = _G.CDK_TS
+    local _ = _G.CDK_YM
+    local _ = _G.CDK
+    local _ = _G.AutoFarmGodChalice
+    local _ = _G.Teleport
+    local _ = _G.AutoKilo
+    local _ = _G.AutoGetUsoap
+    local _ = _G.Praying
+    local _ = _G.TryLucky
+    local _ = _G.AutoColShad
+    local _ = _G.AutoUnHaki
+    local _ = _G.Auto_DonAcces
+    local _ = _G.DragoV1
+    local _ = _G.FarmGodChalice
+    local _ = _G.IceBossRen
+    local _ = _G.BringMobsUser
+
+    fenv._B = false
+
+    task.wait(0.1)
+
+    local _ = _G.FarmMastery_S
+    local _ = _G.FarmMastery_G
+    local _ = _G.FarmMastery_Dev
+    local _ = _G.StartFarm
+    local _ = genv.AutoMaterial
+    local _ = _G.WardenBoss
+    local _ = _G.AutoFactory
+    local _ = _G.HCM
+    local _ = _G.PGB
+    local _ = _G.UPGDrago
+    local _ = _G.AutoFireFlowers
+    local _ = _G.DT_Uzoth
+    local _ = _G.AutoBerry
+    local _ = _G.CollectPresent
+    local _ = _G.AutoPhoenixF
+    local _ = _G.AutoHytHallow
+    local _ = _G.LongsWord
+    local _ = _G.BlackSpikey
+    local _ = _G.AutoHolyTorch
+    local _ = _G.TrainDrago
+    local _ = _G.AutoSaber
+    local _ = _G.CitizenQuest
+    local _ = _G.AutoEctoplasm
+    local _ = _G.KeysRen
+    local _ = _G.Auto_Rainbow_Haki
+    local _ = _G.AutoBigmom
+    local _ = _G.AuraBoss
+    local _ = _G.Auto_Cavender
+    local _ = _G.FarmEliteHunt
+    local _ = _G.AutoZou
+    local _ = _G.AcientOne
+    local _ = _G.AutoFarmNear
+    local _ = _G.AutoRaidCastle
+    local _ = _G.Addealer
+    local _ = _G.TwinHook
+    local _ = _G.Auto
+    local _ = _G.Auto_Def_DarkCoat
+    local _ = _G.AutoMatSoul
+    local _ = _G.AutoSerpentBow
+    local _ = _G.AutoFMon
+    local _ = _G.Auto_Soul_Guitar
+    local _ = _G.AutoSaw
+    local _ = _G.AutoTridentW2
+    local _ = _G.AutoEvoRace
+    local _ = _G.AutoGetQuestBounty
+    local _ = _G.MarinesCoat
+    local _ = _G.TravelDres
+    local _ = _G.Defeating
+    local _ = _G.DummyMan
+    local _ = _G.Auto_Yama
+    local _ = _G.Auto_SwanGG
+    local _ = _G.SwanCoat
+    local _ = _G.AutoEcBoss
+    local _ = _G.Auto_Mink
+    local _ = _G.Auto_Human
+    local _ = _G.Auto_Skypiea
+    local _ = _G.Auto_Fish
+    local _ = _G.CDK_TS
+    local _ = _G.CDK_YM
+    local _ = _G.CDK
+    local _ = _G.AutoFarmGodChalice
+    local _ = _G.Teleport
+    local _ = _G.AutoKilo
+    local _ = _G.AutoGetUsoap
+    local _ = _G.Praying
+    local _ = _G.TryLucky
+    local _ = _G.AutoColShad
+    local _ = _G.AutoUnHaki
+    local _ = _G.Auto_DonAcces
+    local _ = _G.DragoV1
+    local _ = _G.FarmGodChalice
+    local _ = _G.IceBossRen
+    local _ = _G.BringMobsUser
+
+    fenv._B = false
+
+    task.wait(0.1)
+
+    local _ = _G.FarmMastery_S
+    local _ = _G.FarmMastery_G
+    local _ = _G.FarmMastery_Dev
+    local _ = _G.StartFarm
+    local _ = genv.AutoMaterial
+    local _ = _G.WardenBoss
+    local _ = _G.AutoFactory
+    local _ = _G.HCM
+    local _ = _G.PGB
+    local _ = _G.UPGDrago
+    local _ = _G.AutoFireFlowers
+    local _ = _G.DT_Uzoth
+    local _ = _G.AutoBerry
+    local _ = _G.CollectPresent
+    local _ = _G.AutoPhoenixF
+    local _ = _G.AutoHytHallow
+    local _ = _G.LongsWord
+    local _ = _G.BlackSpikey
+    local _ = _G.AutoHolyTorch
+    local _ = _G.TrainDrago
+    local _ = _G.AutoSaber
+    local _ = _G.CitizenQuest
+    local _ = _G.AutoEctoplasm
+    local _ = _G.KeysRen
+    local _ = _G.Auto_Rainbow_Haki
+    local _ = _G.AutoBigmom
+    local _ = _G.AuraBoss
+    local _ = _G.Auto_Cavender
+    local _ = _G.FarmEliteHunt
+    local _ = _G.AutoZou
+    local _ = _G.AcientOne
+    local _ = _G.AutoFarmNear
+    local _ = _G.AutoRaidCastle
+    local _ = _G.Addealer
+    local _ = _G.TwinHook
+    local _ = _G.Auto
+    local _ = _G.Auto_Def_DarkCoat
+    local _ = _G.AutoMatSoul
+    local _ = _G.AutoSerpentBow
+    local _ = _G.AutoFMon
+    local _ = _G.Auto_Soul_Guitar
+    local _ = _G.AutoSaw
+    local _ = _G.AutoTridentW2
+    local _ = _G.AutoEvoRace
+    local _ = _G.AutoGetQuestBounty
+    local _ = _G.MarinesCoat
+    local _ = _G.TravelDres
+    local _ = _G.Defeating
+    local _ = _G.DummyMan
+    local _ = _G.Auto_Yama
+    local _ = _G.Auto_SwanGG
+    local _ = _G.SwanCoat
+    local _ = _G.AutoEcBoss
+    local _ = _G.Auto_Mink
+    local _ = _G.Auto_Human
+    local _ = _G.Auto_Skypiea
+    local _ = _G.Auto_Fish
+    local _ = _G.CDK_TS
+    local _ = _G.CDK_YM
+    local _ = _G.CDK
+    local _ = _G.AutoFarmGodChalice
+    local _ = _G.Teleport
+    local _ = _G.AutoKilo
+    local _ = _G.AutoGetUsoap
+    local _ = _G.Praying
+    local _ = _G.TryLucky
+    local _ = _G.AutoColShad
+    local _ = _G.AutoUnHaki
+    local _ = _G.Auto_DonAcces
+    local _ = _G.DragoV1
+    local _ = _G.FarmGodChalice
+    local _ = _G.IceBossRen
+    local _ = _G.BringMobsUser
+
+    fenv._B = false
+
+    error('internal 557: <25ms: infinitelooperror>')
+end)
+
+fenv.Useskills = function(_428, _428_2) end
+
+local _callgetrawmetatable429 = getrawmetatable(game)
+local __namecall430 = _callgetrawmetatable429.__namecall
+
+setreadonly(_callgetrawmetatable429, false)
+newcclosure(function(...)
+    tostring(getnamecallmethod())
+
+    local _call435 = __namecall430(...)
+
+    return _call435
+end)
+
+_callgetrawmetatable429.__namecall = function(...)
+    tostring(getnamecallmethod())
+
+    local _call439 = __namecall430(...)
+
+    return _call439
+end
+fenv.GetConnectionEnemies = function(_440, _440_2)
+    for _443, _443_2 in pairs(_call45:GetChildren())do
+        _443_2:IsA('Model')
+        type(_440)
+        table.find(_440, _443_2.Name)
+        _443_2:FindFirstChild('Humanoid')
+
+        local _ = _443_2.Humanoid.Health
+
+        error('line 3: attempt to compare number < table')
+    end
+end
+fenv.LowCpu = function()
+    local _gameLighting454 = game.Lighting
+    local _Terrain455 = game.Workspace.Terrain
+
+    _Terrain455.WaterWaveSize = 0
+    _Terrain455.WaterWaveSpeed = 0
+    _Terrain455.WaterReflectance = 0
+    _Terrain455.WaterTransparency = 0
+    _gameLighting454.GlobalShadows = false
+    _gameLighting454.FogEnd = 9000000000
+
+    local _ = game.GetDescendants
+
+    _gameLighting454.Brightness = 1
+
+    local _ = fenv.settings
+
+    error('line 3: attempt to call a nil value')
+end
+fenv.CheckF = function(_458, _458_2)
+    local _ = fenv.GetBP
+
+    error('line 3: attempt to call a nil value')
+end
+fenv.CheckBoat = function(_460, _460_2, _460_3, _460_4)
+    for _464, _464_2 in pairs(workspace.Boats:GetChildren())do
+        local _ = tostring(_464_2.Owner.Value) == tostring(_LocalPlayer41.Name)
+    end
+
+    return false
+end
+fenv.CheckEnemiesBoat = function(_471, _471_2, _471_3, _471_4, _471_5)
+    for _475, _475_2 in pairs(workspace.Enemies:GetChildren())do
+        local _ = _475_2.Name
+    end
+
+    return false
+end
+fenv.CheckPirateGrandBrigade = function(_477, _477_2, _477_3, _477_4, _477_5)
+    for _481, _481_2 in pairs(workspace.Enemies:GetChildren())do
+        local _ = _481_2.Name
+        local _ = _481_2.Name
+    end
+
+    return false
+end
+fenv.CheckShark = function(_484, _484_2)
+    for _488, _488_2 in pairs(workspace.Enemies:GetChildren())do
+        local _ = _488_2.Name
+    end
+
+    return false
+end
+fenv.CheckTerrorShark = function()
+    for _494, _494_2 in pairs(workspace.Enemies:GetChildren())do
+        local _ = _494_2.Name
+    end
+
+    return false
+end
+fenv.CheckPiranha = function(_496)
+    for _500, _500_2 in pairs(workspace.Enemies:GetChildren())do
+        local _ = _500_2.Name
+    end
+
+    return false
+end
+fenv.CheckFishCrew = function(_502, _502_2)
+    for _506, _506_2 in pairs(workspace.Enemies:GetChildren())do
+        local _ = _506_2.Name
+        local _ = _506_2.Name
+    end
+
+    return false
+end
+fenv.CheckHauntedCrew = function(_509, _509_2, _509_3, _509_4, _509_5)
+    for _513, _513_2 in pairs(workspace.Enemies:GetChildren())do
+        local _ = _513_2.Name
+    end
+
+    return false
+end
+fenv.CheckSeaBeast = function(_515, _515_2, _515_3)
+    workspace.SeaBeasts:FindFirstChild('SeaBeast1')
+
+    return true
+end
+fenv.CheckLeviathan = function(_519, _519_2, _519_3, _519_4, _519_5)
+    workspace.SeaBeasts:FindFirstChild('Leviathan')
+
+    return true
+end
+_G.AttemptedFruits = {}
+fenv.UpdStFruit = function(_523)
+    local _LocalPlayer525 = game.Players.LocalPlayer
+    local _ = _LocalPlayer525.Backpack
+    local _ = _LocalPlayer525.Character
+
+    error('internal 557: <25ms: infinitelooperror>')
+end
+fenv.collectFruits = function(_529, _529_2, _529_3) end
+fenv.Getmoon = function(_530, _530_2, _530_3, _530_4) end
+fenv.DropFruits = function(_531, _531_2) end
+fenv.GetBP = function(_532, _532_2, _532_3, _532_4) end
+fenv.GetIn = function(_533, _533_2, _533_3, _533_4, _533_5, _533_6) end
+fenv.GetM = function(_534, _534_2) end
+fenv.GetWP = function(_535, _535_2, _535_3, _535_4) end
+fenv.getInfinity_Ability = function(_536, _536_2, _536_3) end
+fenv.Hop = function(_537, _537_2, _537_3, _537_4, _537_5) end
+
+local _call539 = Instance.new('Part', workspace)
+
+_call539.Size = Vector3.new(1, 1, 1)
+_call539.Name = 'Rip_Indra'
+_call539.Anchored = true
+_call539.CanCollide = false
+_call539.CanTouch = false
+_call539.Transparency = 1
+
+local _call544 = workspace:FindFirstChild(_call539.Name)
+local _ = _call544 == _call539
+
+_call544:Destroy()
+task.spawn(function(_550, _550_2, _550_3, _550_4, _550_5) end)
+task.spawn(function(_553, _553_2, _553_3, _553_4) end)
+
+genv.TweenSpeedFar = 300
+genv.TweenSpeedNear = 600
+fenv._tp = function(_554, _554_2, _554_3, _554_4, _554_5, _554_6) end
+fenv.TeleportToTarget = function(_555, _555_2, _555_3, _555_4, _555_5, _555_6) end
+fenv.notween = function(_556) end
+fenv.BTP = function(_557, _557_2, _557_3, _557_4) end
+
+spawn(function() end)
+
+fenv.QuestB = function(_560, _560_2) end
+fenv.QuestBeta = function(_561, _561_2, _561_3, _561_4) end
+fenv.QuestCheck = function(_562) end
+fenv.MaterialMon = function() end
+fenv.QuestNeta = function(_564, _564_2) end
+
+local _call566 = _101:CreateWindow({
+    Image = 'rbxassetid://105245380363493',
+    Title = 'Night Mystic',
+    Desc = '- Blox Fruit',
+})
+
+task.spawn(function() end)
+
+local _call571 = _call566:AddTab('info / Discord', 'rbxassetid://10723415903')
+local _call573 = _call566:AddTab('Status And Server', 'rbxassetid://122223674767625')
+local _call575 = _call566:AddTab('Shop', 'rbxassetid://134556077676632')
+local _call577 = _call566:AddTab('Main Farm', 'rbxassetid://127561653320876')
+local _call579 = _call566:AddTab('Farm Mastery', 'rbxassetid://10709782497')
+local _call581 = _call566:AddTab('Farm Others', 'rbxassetid://72448332143088')
+local _call583 = _call566:AddTab('Sea Events', 'rbxassetid://96788654458681')
+local _call585 = _call566:AddTab('Race Upgrade', 'rbxassetid://115164375298022')
+local _call587 = _call566:AddTab('Dojo Quest & Drago Race', 'rbxassetid://91920478152016')
+local _call589 = _call566:AddTab('Visuals & ESP', 'rbxassetid://10723346959')
+local _call591 = _call566:AddTab('Local Player', 'rbxassetid://98870151777863')
+local _call593 = _call566:AddTab('Teleport', 'rbxassetid://10734886004')
+local _call595 = _call566:AddTab('Get Items & Upgrade', 'rbxassetid://10709782582')
+local _call597 = _call566:AddTab('Raid & Fruit', 'rbxassetid://10709790875')
+local _call599 = _call566:AddTab('Settings & Misc', 'rbxassetid://127147149367603')
+
+_call577:AddLeftGroupbox('Auto Farm main')
+
+local _call603 = _call579:AddLeftGroupbox('Farm Mastery')
+local _call605 = _call573:AddLeftGroupbox('Server Options')
+
+_call575:AddLeftGroupbox('Shop, Styles & Accessories')
+_call581:AddLeftGroupbox('Farm events')
+_call581:AddLeftGroupbox('Fishing')
+_call581:AddLeftGroupbox('Farm others')
+_call583:AddLeftGroupbox('Sea Events')
+_call583:AddLeftGroupbox('maritime islands')
+_call583:AddLeftGroupbox('Configure skills for Sea events')
+_call585:AddLeftGroupbox('Race V2/ V3 / V4')
+_call585:AddLeftGroupbox('Upgrade V4')
+
+local _call625 = _call595:AddLeftGroupbox('Swords & accessories')
+
+_call587:AddLeftGroupbox('Dojo Quest')
+
+local _call629 = _call589:AddLeftGroupbox('ESP & World Visuals')
+
+_call591:AddLeftGroupbox('PVP, Movement & Aimbot')
+_call593:AddLeftGroupbox('Teleports')
+_call599:AddLeftGroupbox('Script Settings')
+
+local _call637 = _call599:AddLeftGroupbox('Misc & Codes')
+
+_call597:AddLeftGroupbox('Raid & Fruits')
+_call571:AddLeftGroupbox('discord server And information')
+
+local _call643 = _call599:AddLeftGroupbox('Manual Save')
+
+_call643:AddButton({
+    Callback = function(_646, _646_2, _646_3, _646_4) end,
+    Text = 'Salvar Configura\u{e7}\u{f5}es Agora',
+})
+_call643:AddButton({
+    Callback = function(_649, _649_2, _649_3, _649_4) end,
+    Text = 'Resetar Configura\u{e7}\u{f5}es',
+})
+
+local _ = _call603.AddSeperator
+
+_call603:AddSeperator('Mastery')
+_call603:AddDropdown('', {
+    Values = {
+        [1] = 'Cake',
+        [2] = 'Bone',
+    },
+    Multi = false,
+    Text = 'Select M\u{e9}todo',
+    Callback = function(_655) end,
+    Default = 'Cake',
+})
+
+local _ = _call19.FarmMastery_Dev
+local _FarmMastery_Dev657 = _call19.FarmMastery_Dev
+
+_call603:AddToggle('', {
+    Description = '',
+    Text = 'Auto Farm Mastery Fruit',
+    Default = _FarmMastery_Dev657,
+    Callback = function(_660, _660_2, _660_3, _660_4) end,
+})
+spawn(function(_662, _662_2, _662_3, _662_4) end)
+spawn(function(_664, _664_2, _664_3, _664_4, _664_5) end)
+_call603:AddToggle('', {
+    Description = '',
+    Text = 'Auto Farm Mastery Gun',
+    Default = false,
+    Callback = function(_667, _667_2) end,
+})
+spawn(function(_669, _669_2) end)
+
+_G.MasteryHealthPercent = 70
+
+local _ = _call19.MasteryHealth_Save
+local _MasteryHealth_Save671 = _call19.MasteryHealth_Save
+
+_call603:AddSlider({
+    Min = 10,
+    Default = _MasteryHealth_Save671,
+    Max = 100,
+    Text = 'Skill Usage HP (%)',
+    Callback = function(_674, _674_2, _674_3, _674_4) end,
+    Rounding = 0,
+})
+
+local _ = _call19.FruitSkills_Multi
+local _FruitSkills_Multi676 = _call19.FruitSkills_Multi
+
+for _677, _677_2 in pairs(_FruitSkills_Multi676) do end
+
+_call603:AddDropdown('', {
+    Values = {
+        [1] = 'Fruit Skill Z',
+        [2] = 'Fruit Skill X',
+        [3] = 'Fruit Skill C',
+        [4] = 'Fruit Skill V',
+        [5] = 'Fruit Skill F',
+    },
+    Multi = true,
+    Text = 'Select Fruit Skills',
+    Callback = function(_680, _680_2, _680_3, _680_4) end,
+    Default = {[1] = _677},
+})
+
+local _ = _call605.AddSeperator
+
+_call605:AddSeperator('Server - Function')
+_call605:AddButton({
+    Callback = function(_686, _686_2, _686_3) end,
+    Text = 'Rejoin Server',
+})
+_call605:AddButton({
+    Callback = function(_689, _689_2, _689_3, _689_4, _689_5) end,
+    Text = 'Hop Server',
+})
+_call605:AddButton({
+    Callback = function(_692, _692_2, _692_3, _692_4, _692_5) end,
+    Text = 'Hop Server with a few people',
+})
+_call605:AddButton({
+    Callback = function(_695) end,
+    Text = 'Hop Sever with low ping',
+})
+_call605:AddInput('', {
+    Callback = function(_698, _698_2, _698_3) end,
+    Text = 'JobID',
+    Default = '',
+    Placeholder = '',
+})
+spawn(function(_700, _700_2, _700_3, _700_4) end)
+_call605:AddButton({
+    Callback = function(_703, _703_2, _703_3, _703_4) end,
+    Text = 'Join Server',
+})
+_call605:AddButton({
+    Callback = function(_706, _706_2, _706_3) end,
+    Text = 'Copy JobID Server',
+})
+
+fenv.isnil = function(_707, _707_2) end
+fenv.Number = 443998
+fenv.EspPly = function(_708) end
+fenv.DevEsp = function(_709, _709_2, _709_3, _709_4, _709_5) end
+fenv.flowerEsp = function(_710, _710_2, _710_3, _710_4) end
+fenv.gearEsp = function(_711, _711_2, _711_3) end
+fenv.AdvanFruitEsp = function(_712, _712_2, _712_3) end
+fenv.HakiClorEsp = function() end
+fenv.LegenSword = function(_714, _714_2) end
+fenv.ChestEsp = function() end
+fenv.berriesEsp = function() end
+_G.ESPColor = Color3.fromRGB(255, 255, 255)
+fenv.IslandESP_Func = function(_719, _719_2, _719_3) end
+
+local _ = _call629.AddSeperator
+
+_call629:AddSeperator('Esp Items / Entity / Island')
+_call629:AddToggle('', {
+    Description = '',
+    Text = 'Esp Berries',
+    Default = false,
+    Callback = function(_725, _725_2, _725_3) end,
+})
+_call629:AddToggle('', {
+    Description = '',
+    Text = 'Esp Players',
+    Default = false,
+    Callback = function(_728, _728_2, _728_3) end,
+})
+_call629:AddToggle('', {
+    Description = '',
+    Text = 'Esp Chests',
+    Default = false,
+    Callback = function(_731, _731_2, _731_3, _731_4, _731_5) end,
+})
+_call629:AddToggle('', {
+    Description = '',
+    Text = 'Esp Fruits',
+    Default = false,
+    Callback = function(_734, _734_2, _734_3) end,
+})
+_call629:AddToggle('', {
+    Description = '',
+    Text = 'Esp Island',
+    Default = false,
+    Callback = function(_737, _737_2, _737_3, _737_4, _737_5) end,
+})
+
+local _ = _call629.AddSeperator
+
+_call629:AddSeperator('Fontes')
+
+local _ = Enum.Font.Arial
+
+game.Players.LocalPlayer.PlayerGui.DescendantAdded:Connect(function(_749) end)
+_call629:AddButton({
+    Callback = function(_752, _752_2) end,
+    Text = 'Fonte: Amatic SC',
+})
+_call629:AddButton({
+    Callback = function(_755, _755_2, _755_3, _755_4, _755_5) end,
+    Text = 'Fonte: Antique',
+})
+_call629:AddButton({
+    Callback = function(_758, _758_2) end,
+    Text = 'Fonte: Arcade',
+})
+_call629:AddButton({
+    Callback = function(_761, _761_2, _761_3) end,
+    Text = 'Fonte: Arial',
+})
+_call629:AddButton({
+    Callback = function(_764, _764_2, _764_3, _764_4, _764_5) end,
+    Text = 'Fonte: Arial Bold',
+})
+_call629:AddButton({
+    Callback = function(_767, _767_2, _767_3, _767_4) end,
+    Text = 'Fonte: Bangers',
+})
+_call629:AddButton({
+    Callback = function(_770, _770_2, _770_3, _770_4) end,
+    Text = 'Fonte: Bodoni',
+})
+_call629:AddButton({
+    Callback = function(_773, _773_2) end,
+    Text = 'Fonte: Cartoon',
+})
+_call629:AddButton({
+    Callback = function(_776, _776_2, _776_3, _776_4, _776_5) end,
+    Text = 'Fonte: Code',
+})
+_call629:AddButton({
+    Callback = function(_779, _779_2, _779_3, _779_4, _779_5) end,
+    Text = 'Fonte: Creepster',
+})
+_call629:AddButton({
+    Callback = function(_782, _782_2) end,
+    Text = 'Fonte: Denk One',
+})
+_call629:AddButton({
+    Callback = function() end,
+    Text = 'Fonte: Fondamento',
+})
+_call629:AddButton({
+    Callback = function() end,
+    Text = 'Fonte: Fredoka One',
+})
+_call629:AddButton({
+    Callback = function(_791, _791_2, _791_3) end,
+    Text = 'Fonte: Garamond',
+})
+_call629:AddButton({
+    Callback = function(_794) end,
+    Text = 'Fonte: Gotham',
+})
+
+local _ = _call637.AddSeperator
+
+_call637:AddSeperator('Fps')
+_call637:AddButton({
+    Callback = function() end,
+    Text = 'Stretch the screen',
+})
+_call637:AddButton({
+    Callback = function(_803, _803_2, _803_3) end,
+    Text = 'Fps Boost',
+})
+
+local _ = _call625.AddSeperator
+
+_call625:AddSeperator('Farm Mastery')
+CFrame.new(-9513.63867, 164.010269, 5786.66895, -0.0950724334, 9.31791888e-8, 0.995470345, 7.18874515e-9, 1, -9.29166148e-8, -0.995470345, -1.67762626e-9, -0.0950724334)
+
+local _ = _call605.AddSeperator
+
+_call605:AddSeperator('Server - Status')
+_call605:AddLabel('Time Zone ')
+
+fenv.UpdateOS = function(_814, _814_2, _814_3) end
+
+spawn(function(_816) end)
+_call605:AddLabel('Time ')
+
+fenv.UpdateTime = function(_819) end
+
+spawn(function() end)
+
+local _WorldOrigin823 = game.Workspace._WorldOrigin
+local _ = _WorldOrigin823.Locations
+
+error('internal 557: <25ms: infinitelooperror>')
