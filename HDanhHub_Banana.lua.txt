@@ -960,8 +960,6 @@ function Funcs:Attack()
     end
     Register_Hit:FireServer(unpack(args))
 end
-
-
 -- ==========================================
 -- SERVICES
 -- ==========================================
