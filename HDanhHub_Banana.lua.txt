@@ -3656,29 +3656,11 @@ task.defer(function()
 end)
 Tabs.Info:AddSection("Thông Tin")
 Tabs.Info:AddButton({
-    ["Title"] = "HDanh Community",
+    ["Title"] = "NHT X Hub Community",
     ["Description"] = "Discord",
     ["Callback"] = function()
-        setclipboard(tostring("https://dsc.gg/nopermc"))
+        setclipboard(tostring("https://discord.gg/wjZX9rTCq"))
     end
-})
-Tabs.Info:AddButton({
-    ["Title"] = "HDanh Hub",
-    ["Description"] = "Youtube",
-    ["Callback"] = function()
-        setclipboard(tostring("https://youtube.com/@nopermc"))
-    end
-})
-Tabs.Info:AddButton({
-    ["Title"] = "HDanh Hub",
-    ["Description"] = "Tiktok",
-    ["Callback"] = function()
-        setclipboard(tostring("www.tiktok.com/@uytins1vn._"))
-    end
-})
-Tabs.Info:AddParagraph({
-    ["Title"] = "Phát triển Monster",
-    ["Description"] = "Kỹ Năng: Del có"
 })
 local v252 = nil
 if identifyexecutor then
