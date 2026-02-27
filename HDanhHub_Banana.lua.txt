@@ -615,8 +615,6 @@ v5:Destroy();
 -- end);
 loadstring(game:HttpGet("https://raw.githubusercontent.com/hdanhhub/hdanhhub/refs/heads/main/Fix-Lag.lua.txt"))()
 end
-
---[[ 
     loadstring(game:HttpGet("https://raw.githubusercontent.com/trongdeptraihucscript/Setting/refs/heads/main/Fast-Attack.lua"))()
 local function GetBladeHits()
     local targets = {}
